@@ -1,0 +1,139 @@
+
+
+================================================================
+== Vivado HLS Report for 'Block_codeRepl8_proc'
+================================================================
+* Date:           Sun Nov  7 14:28:05 2021
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        lab4_z4m_prj
+* Solution:       sol1
+* Product family: artix7
+* Target device:  xa7a12t-csg325-1Q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +------+----------+----------+------------+
+    | Clock|  Target  | Estimated| Uncertainty|
+    +------+----------+----------+------------+
+    |clk   | 10.00 ns | 6.060 ns |   0.10 ns  |
+    +------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        2|        2| 20.000 ns | 20.000 ns |    2|    2|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT | URAM|
++-----------------+---------+-------+-------+------+-----+
+|DSP              |        -|      -|      -|     -|    -|
+|Expression       |        -|      -|      0|     2|    -|
+|FIFO             |        -|      -|      -|     -|    -|
+|Instance         |        -|      -|      -|     -|    -|
+|Memory           |        -|      -|      -|     -|    -|
+|Multiplexer      |        -|      -|      -|    54|    -|
+|Register         |        -|      -|     36|     -|    -|
++-----------------+---------+-------+-------+------+-----+
+|Total            |        0|      0|     36|    56|    0|
++-----------------+---------+-------+-------+------+-----+
+|Available        |       40|     40|  16000|  8000|    0|
++-----------------+---------+-------+-------+------+-----+
+|Utilization (%)  |        0|      0|   ~0  |  ~0  |    0|
++-----------------+---------+-------+-------+------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+-------+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |ap_block_state1  |    or    |      0|  0|   2|           1|           1|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |Total            |          |      0|  0|   2|           1|           1|
+    +-----------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm           |  21|          4|    1|          4|
+    |ap_done             |   9|          2|    1|          2|
+    |scale_address0      |  15|          3|    2|          6|
+    |tmp3_out_out_blk_n  |   9|          2|    1|          2|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               |  54|         11|    5|         14|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+----+----+-----+-----------+
+    |     Name    | FF | LUT| Bits| Const Bits|
+    +-------------+----+----+-----+-----------+
+    |ap_CS_fsm    |   3|   0|    3|          0|
+    |ap_done_reg  |   1|   0|    1|          0|
+    |tmp1_reg_96  |  32|   0|   32|          0|
+    +-------------+----+----+-----+-----------+
+    |Total        |  36|   0|   36|          0|
+    +-------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+----------------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++---------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk               |  in |    1| ap_ctrl_hs | Block_codeRepl8_proc | return value |
+|ap_rst               |  in |    1| ap_ctrl_hs | Block_codeRepl8_proc | return value |
+|ap_start             |  in |    1| ap_ctrl_hs | Block_codeRepl8_proc | return value |
+|ap_done              | out |    1| ap_ctrl_hs | Block_codeRepl8_proc | return value |
+|ap_continue          |  in |    1| ap_ctrl_hs | Block_codeRepl8_proc | return value |
+|ap_idle              | out |    1| ap_ctrl_hs | Block_codeRepl8_proc | return value |
+|ap_ready             | out |    1| ap_ctrl_hs | Block_codeRepl8_proc | return value |
+|ap_return_0          | out |   32| ap_ctrl_hs | Block_codeRepl8_proc | return value |
+|ap_return_1          | out |   32| ap_ctrl_hs | Block_codeRepl8_proc | return value |
+|scale_address0       | out |    2|  ap_memory |         scale        |     array    |
+|scale_ce0            | out |    1|  ap_memory |         scale        |     array    |
+|scale_q0             |  in |   32|  ap_memory |         scale        |     array    |
+|scale_address1       | out |    2|  ap_memory |         scale        |     array    |
+|scale_ce1            | out |    1|  ap_memory |         scale        |     array    |
+|scale_q1             |  in |   32|  ap_memory |         scale        |     array    |
+|tmp3_out_out_din     | out |   32|   ap_fifo  |     tmp3_out_out     |    pointer   |
+|tmp3_out_out_full_n  |  in |    1|   ap_fifo  |     tmp3_out_out     |    pointer   |
+|tmp3_out_out_write   | out |    1|   ap_fifo  |     tmp3_out_out     |    pointer   |
++---------------------+-----+-----+------------+----------------------+--------------+
+

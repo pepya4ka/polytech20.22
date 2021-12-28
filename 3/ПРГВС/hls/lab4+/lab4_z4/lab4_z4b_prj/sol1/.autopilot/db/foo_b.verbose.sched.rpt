@@ -1,0 +1,327 @@
+
+
+================================================================
+== Vivado HLS Report for 'foo_b'
+================================================================
+* Date:           Sun Nov  7 14:13:01 2021
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        lab4_z4b_prj
+* Solution:       sol1
+* Product family: artix7
+* Target device:  xa7a12t-csg325-1Q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +------+----------+----------+------------+
+    | Clock|  Target  | Estimated| Uncertainty|
+    +------+----------+----------+------------+
+    |clk   | 10.00 ns | 9.216 ns |   0.10 ns  |
+    +------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    49164|    49164| 0.492 ms | 0.492 ms |  49164|  49164|   none  |
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+-------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- Loop1   |    16386|    16386|         4|          1|          1|  16384|    yes   |
+        |- Loop2   |    16386|    16386|         4|          1|          1|  16384|    yes   |
+        |- Loop3   |    16384|    16384|         2|          1|          1|  16384|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+-------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+  * Pipeline-1: initiation interval (II) = 1, depth = 4
+  * Pipeline-2: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 16
+* Pipeline : 3
+  Pipeline-0 : II = 1, D = 4, States = { 3 4 5 6 }
+  Pipeline-1 : II = 1, D = 4, States = { 9 10 11 12 }
+  Pipeline-2 : II = 1, D = 2, States = { 14 15 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 7 4 
+4 --> 5 
+5 --> 6 
+6 --> 3 
+7 --> 8 
+8 --> 9 
+9 --> 13 10 
+10 --> 11 
+11 --> 12 
+12 --> 9 
+13 --> 14 
+14 --> 16 15 
+15 --> 14 
+16 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.15>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%scale_addr = getelementptr [3 x i32]* %scale, i64 0, i64 0" [./source/lab4_z4.c:4]   --->   Operation 17 'getelementptr' 'scale_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%temp1 = alloca [16384 x i32], align 16" [./source/lab4_z4.c:6]   --->   Operation 18 'alloca' 'temp1' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%temp2 = alloca [16384 x i32], align 16" [./source/lab4_z4.c:6]   --->   Operation 19 'alloca' 'temp2' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%temp3 = alloca [16384 x i32], align 16" [./source/lab4_z4.c:6]   --->   Operation 20 'alloca' 'temp3' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%scale_addr_1 = getelementptr [3 x i32]* %scale, i64 0, i64 1" [./source/lab4_z4.c:9]   --->   Operation 21 'getelementptr' 'scale_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [2/2] (2.15ns)   --->   "%scale_load = load i32* %scale_addr, align 4" [./source/lab4_z4.c:8]   --->   Operation 22 'load' 'scale_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_1 : Operation 23 [2/2] (2.15ns)   --->   "%scale_load_1 = load i32* %scale_addr_1, align 4" [./source/lab4_z4.c:9]   --->   Operation 23 'load' 'scale_load_1' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+
+State 2 <SV = 1> <Delay = 2.15>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([16384 x i32]* %data_in) nounwind, !map !7"   --->   Operation 24 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %scale) nounwind, !map !13"   --->   Operation 25 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([16384 x i32]* %data_out) nounwind, !map !19"   --->   Operation 26 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([6 x i8]* @foo_b_str) nounwind"   --->   Operation 27 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/2] (2.15ns)   --->   "%scale_load = load i32* %scale_addr, align 4" [./source/lab4_z4.c:8]   --->   Operation 28 'load' 'scale_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_2 : Operation 29 [1/2] (2.15ns)   --->   "%scale_load_1 = load i32* %scale_addr_1, align 4" [./source/lab4_z4.c:9]   --->   Operation 29 'load' 'scale_load_1' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_2 : Operation 30 [1/1] (1.66ns)   --->   "br label %1" [./source/lab4_z4.c:7]   --->   Operation 30 'br' <Predicate = true> <Delay = 1.66>
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%i_0 = phi i15 [ 0, %0 ], [ %i, %Loop1 ]"   --->   Operation 31 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (2.26ns)   --->   "%icmp_ln7 = icmp eq i15 %i_0, -16384" [./source/lab4_z4.c:7]   --->   Operation 32 'icmp' 'icmp_ln7' <Predicate = true> <Delay = 2.26> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.26> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16384, i64 16384, i64 16384) nounwind"   --->   Operation 33 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (2.14ns)   --->   "%i = add i15 %i_0, 1" [./source/lab4_z4.c:7]   --->   Operation 34 'add' 'i' <Predicate = true> <Delay = 2.14> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "br i1 %icmp_ln7, label %.preheader1.preheader, label %Loop1" [./source/lab4_z4.c:7]   --->   Operation 35 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln8 = zext i15 %i_0 to i64" [./source/lab4_z4.c:8]   --->   Operation 36 'zext' 'zext_ln8' <Predicate = (!icmp_ln7)> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%data_in_addr = getelementptr [16384 x i32]* %data_in, i64 0, i64 %zext_ln8" [./source/lab4_z4.c:8]   --->   Operation 37 'getelementptr' 'data_in_addr' <Predicate = (!icmp_ln7)> <Delay = 0.00>
+ST_3 : Operation 38 [2/2] (3.25ns)   --->   "%data_in_load = load i32* %data_in_addr, align 4" [./source/lab4_z4.c:8]   --->   Operation 38 'load' 'data_in_load' <Predicate = (!icmp_ln7)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+
+State 4 <SV = 3> <Delay = 3.25>
+ST_4 : Operation 39 [1/2] (3.25ns)   --->   "%data_in_load = load i32* %data_in_addr, align 4" [./source/lab4_z4.c:8]   --->   Operation 39 'load' 'data_in_load' <Predicate = (!icmp_ln7)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+
+State 5 <SV = 4> <Delay = 8.47>
+ST_5 : Operation 40 [1/1] (8.47ns)   --->   "%mul_ln8 = mul nsw i32 %data_in_load, %scale_load" [./source/lab4_z4.c:8]   --->   Operation 40 'mul' 'mul_ln8' <Predicate = (!icmp_ln7)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 41 [1/1] (8.47ns)   --->   "%mul_ln9 = mul nsw i32 %data_in_load, %scale_load_1" [./source/lab4_z4.c:9]   --->   Operation 41 'mul' 'mul_ln9' <Predicate = (!icmp_ln7)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 3.25>
+ST_6 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str) nounwind" [./source/lab4_z4.c:7]   --->   Operation 42 'specloopname' <Predicate = (!icmp_ln7)> <Delay = 0.00>
+ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([6 x i8]* @p_str) nounwind" [./source/lab4_z4.c:7]   --->   Operation 43 'specregionbegin' 'tmp' <Predicate = (!icmp_ln7)> <Delay = 0.00>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [./source/lab4_z4.c:8]   --->   Operation 44 'specpipeline' <Predicate = (!icmp_ln7)> <Delay = 0.00>
+ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%temp1_addr = getelementptr inbounds [16384 x i32]* %temp1, i64 0, i64 %zext_ln8" [./source/lab4_z4.c:8]   --->   Operation 45 'getelementptr' 'temp1_addr' <Predicate = (!icmp_ln7)> <Delay = 0.00>
+ST_6 : Operation 46 [1/1] (3.25ns)   --->   "store i32 %mul_ln8, i32* %temp1_addr, align 4" [./source/lab4_z4.c:8]   --->   Operation 46 'store' <Predicate = (!icmp_ln7)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_6 : Operation 47 [1/1] (0.00ns)   --->   "%temp2_addr = getelementptr inbounds [16384 x i32]* %temp2, i64 0, i64 %zext_ln8" [./source/lab4_z4.c:9]   --->   Operation 47 'getelementptr' 'temp2_addr' <Predicate = (!icmp_ln7)> <Delay = 0.00>
+ST_6 : Operation 48 [1/1] (3.25ns)   --->   "store i32 %mul_ln9, i32* %temp2_addr, align 4" [./source/lab4_z4.c:9]   --->   Operation 48 'store' <Predicate = (!icmp_ln7)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_6 : Operation 49 [1/1] (0.00ns)   --->   "%empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([6 x i8]* @p_str, i32 %tmp) nounwind" [./source/lab4_z4.c:10]   --->   Operation 49 'specregionend' 'empty_3' <Predicate = (!icmp_ln7)> <Delay = 0.00>
+ST_6 : Operation 50 [1/1] (0.00ns)   --->   "br label %1" [./source/lab4_z4.c:7]   --->   Operation 50 'br' <Predicate = (!icmp_ln7)> <Delay = 0.00>
+
+State 7 <SV = 3> <Delay = 2.15>
+ST_7 : Operation 51 [1/1] (0.00ns)   --->   "%scale_addr_2 = getelementptr [3 x i32]* %scale, i64 0, i64 2" [./source/lab4_z4.c:12]   --->   Operation 51 'getelementptr' 'scale_addr_2' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 52 [2/2] (2.15ns)   --->   "%scale_load_2 = load i32* %scale_addr_2, align 4" [./source/lab4_z4.c:12]   --->   Operation 52 'load' 'scale_load_2' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+
+State 8 <SV = 4> <Delay = 2.15>
+ST_8 : Operation 53 [1/2] (2.15ns)   --->   "%scale_load_2 = load i32* %scale_addr_2, align 4" [./source/lab4_z4.c:12]   --->   Operation 53 'load' 'scale_load_2' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_8 : Operation 54 [1/1] (1.66ns)   --->   "br label %.preheader1" [./source/lab4_z4.c:11]   --->   Operation 54 'br' <Predicate = true> <Delay = 1.66>
+
+State 9 <SV = 5> <Delay = 3.25>
+ST_9 : Operation 55 [1/1] (0.00ns)   --->   "%j_0 = phi i15 [ %j, %Loop2 ], [ 0, %.preheader1.preheader ]"   --->   Operation 55 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 56 [1/1] (2.26ns)   --->   "%icmp_ln11 = icmp eq i15 %j_0, -16384" [./source/lab4_z4.c:11]   --->   Operation 56 'icmp' 'icmp_ln11' <Predicate = true> <Delay = 2.26> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.26> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 57 [1/1] (0.00ns)   --->   "%empty_4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16384, i64 16384, i64 16384) nounwind"   --->   Operation 57 'speclooptripcount' 'empty_4' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 58 [1/1] (2.14ns)   --->   "%j = add i15 %j_0, 1" [./source/lab4_z4.c:11]   --->   Operation 58 'add' 'j' <Predicate = true> <Delay = 2.14> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 59 [1/1] (0.00ns)   --->   "br i1 %icmp_ln11, label %.preheader.preheader, label %Loop2" [./source/lab4_z4.c:11]   --->   Operation 59 'br' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 60 [1/1] (0.00ns)   --->   "%zext_ln12 = zext i15 %j_0 to i64" [./source/lab4_z4.c:12]   --->   Operation 60 'zext' 'zext_ln12' <Predicate = (!icmp_ln11)> <Delay = 0.00>
+ST_9 : Operation 61 [1/1] (0.00ns)   --->   "%temp1_addr_1 = getelementptr inbounds [16384 x i32]* %temp1, i64 0, i64 %zext_ln12" [./source/lab4_z4.c:12]   --->   Operation 61 'getelementptr' 'temp1_addr_1' <Predicate = (!icmp_ln11)> <Delay = 0.00>
+ST_9 : Operation 62 [2/2] (3.25ns)   --->   "%temp1_load = load i32* %temp1_addr_1, align 4" [./source/lab4_z4.c:12]   --->   Operation 62 'load' 'temp1_load' <Predicate = (!icmp_ln11)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+
+State 10 <SV = 6> <Delay = 3.25>
+ST_10 : Operation 63 [1/2] (3.25ns)   --->   "%temp1_load = load i32* %temp1_addr_1, align 4" [./source/lab4_z4.c:12]   --->   Operation 63 'load' 'temp1_load' <Predicate = (!icmp_ln11)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+
+State 11 <SV = 7> <Delay = 8.47>
+ST_11 : Operation 64 [1/1] (8.47ns)   --->   "%mul_ln12 = mul nsw i32 %temp1_load, %scale_load_2" [./source/lab4_z4.c:12]   --->   Operation 64 'mul' 'mul_ln12' <Predicate = (!icmp_ln11)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 8> <Delay = 3.25>
+ST_12 : Operation 65 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str2) nounwind" [./source/lab4_z4.c:11]   --->   Operation 65 'specloopname' <Predicate = (!icmp_ln11)> <Delay = 0.00>
+ST_12 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([6 x i8]* @p_str2) nounwind" [./source/lab4_z4.c:11]   --->   Operation 66 'specregionbegin' 'tmp_1' <Predicate = (!icmp_ln11)> <Delay = 0.00>
+ST_12 : Operation 67 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [./source/lab4_z4.c:12]   --->   Operation 67 'specpipeline' <Predicate = (!icmp_ln11)> <Delay = 0.00>
+ST_12 : Operation 68 [1/1] (0.00ns)   --->   "%temp3_addr = getelementptr inbounds [16384 x i32]* %temp3, i64 0, i64 %zext_ln12" [./source/lab4_z4.c:12]   --->   Operation 68 'getelementptr' 'temp3_addr' <Predicate = (!icmp_ln11)> <Delay = 0.00>
+ST_12 : Operation 69 [1/1] (3.25ns)   --->   "store i32 %mul_ln12, i32* %temp3_addr, align 4" [./source/lab4_z4.c:12]   --->   Operation 69 'store' <Predicate = (!icmp_ln11)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_12 : Operation 70 [1/1] (0.00ns)   --->   "%empty_5 = call i32 (...)* @_ssdm_op_SpecRegionEnd([6 x i8]* @p_str2, i32 %tmp_1) nounwind" [./source/lab4_z4.c:13]   --->   Operation 70 'specregionend' 'empty_5' <Predicate = (!icmp_ln11)> <Delay = 0.00>
+ST_12 : Operation 71 [1/1] (0.00ns)   --->   "br label %.preheader1" [./source/lab4_z4.c:11]   --->   Operation 71 'br' <Predicate = (!icmp_ln11)> <Delay = 0.00>
+
+State 13 <SV = 6> <Delay = 1.66>
+ST_13 : Operation 72 [1/1] (1.66ns)   --->   "br label %.preheader" [./source/lab4_z4.c:14]   --->   Operation 72 'br' <Predicate = true> <Delay = 1.66>
+
+State 14 <SV = 7> <Delay = 3.25>
+ST_14 : Operation 73 [1/1] (0.00ns)   --->   "%k_0 = phi i15 [ %k, %Loop3 ], [ 0, %.preheader.preheader ]"   --->   Operation 73 'phi' 'k_0' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 74 [1/1] (2.26ns)   --->   "%icmp_ln14 = icmp eq i15 %k_0, -16384" [./source/lab4_z4.c:14]   --->   Operation 74 'icmp' 'icmp_ln14' <Predicate = true> <Delay = 2.26> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.26> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 75 [1/1] (0.00ns)   --->   "%empty_6 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16384, i64 16384, i64 16384) nounwind"   --->   Operation 75 'speclooptripcount' 'empty_6' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 76 [1/1] (2.14ns)   --->   "%k = add i15 %k_0, 1" [./source/lab4_z4.c:14]   --->   Operation 76 'add' 'k' <Predicate = true> <Delay = 2.14> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 77 [1/1] (0.00ns)   --->   "br i1 %icmp_ln14, label %2, label %Loop3" [./source/lab4_z4.c:14]   --->   Operation 77 'br' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 78 [1/1] (0.00ns)   --->   "%zext_ln15 = zext i15 %k_0 to i64" [./source/lab4_z4.c:15]   --->   Operation 78 'zext' 'zext_ln15' <Predicate = (!icmp_ln14)> <Delay = 0.00>
+ST_14 : Operation 79 [1/1] (0.00ns)   --->   "%temp2_addr_1 = getelementptr inbounds [16384 x i32]* %temp2, i64 0, i64 %zext_ln15" [./source/lab4_z4.c:15]   --->   Operation 79 'getelementptr' 'temp2_addr_1' <Predicate = (!icmp_ln14)> <Delay = 0.00>
+ST_14 : Operation 80 [2/2] (3.25ns)   --->   "%temp2_load = load i32* %temp2_addr_1, align 4" [./source/lab4_z4.c:15]   --->   Operation 80 'load' 'temp2_load' <Predicate = (!icmp_ln14)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_14 : Operation 81 [1/1] (0.00ns)   --->   "%temp3_addr_1 = getelementptr inbounds [16384 x i32]* %temp3, i64 0, i64 %zext_ln15" [./source/lab4_z4.c:15]   --->   Operation 81 'getelementptr' 'temp3_addr_1' <Predicate = (!icmp_ln14)> <Delay = 0.00>
+ST_14 : Operation 82 [2/2] (3.25ns)   --->   "%temp3_load = load i32* %temp3_addr_1, align 4" [./source/lab4_z4.c:15]   --->   Operation 82 'load' 'temp3_load' <Predicate = (!icmp_ln14)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+
+State 15 <SV = 8> <Delay = 9.21>
+ST_15 : Operation 83 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str3) nounwind" [./source/lab4_z4.c:14]   --->   Operation 83 'specloopname' <Predicate = (!icmp_ln14)> <Delay = 0.00>
+ST_15 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([6 x i8]* @p_str3) nounwind" [./source/lab4_z4.c:14]   --->   Operation 84 'specregionbegin' 'tmp_2' <Predicate = (!icmp_ln14)> <Delay = 0.00>
+ST_15 : Operation 85 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [./source/lab4_z4.c:15]   --->   Operation 85 'specpipeline' <Predicate = (!icmp_ln14)> <Delay = 0.00>
+ST_15 : Operation 86 [1/2] (3.25ns)   --->   "%temp2_load = load i32* %temp2_addr_1, align 4" [./source/lab4_z4.c:15]   --->   Operation 86 'load' 'temp2_load' <Predicate = (!icmp_ln14)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_15 : Operation 87 [1/2] (3.25ns)   --->   "%temp3_load = load i32* %temp3_addr_1, align 4" [./source/lab4_z4.c:15]   --->   Operation 87 'load' 'temp3_load' <Predicate = (!icmp_ln14)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_15 : Operation 88 [1/1] (2.70ns)   --->   "%add_ln15 = add nsw i32 %temp2_load, %temp3_load" [./source/lab4_z4.c:15]   --->   Operation 88 'add' 'add_ln15' <Predicate = (!icmp_ln14)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 89 [1/1] (0.00ns)   --->   "%data_out_addr = getelementptr [16384 x i32]* %data_out, i64 0, i64 %zext_ln15" [./source/lab4_z4.c:15]   --->   Operation 89 'getelementptr' 'data_out_addr' <Predicate = (!icmp_ln14)> <Delay = 0.00>
+ST_15 : Operation 90 [1/1] (3.25ns)   --->   "store i32 %add_ln15, i32* %data_out_addr, align 4" [./source/lab4_z4.c:15]   --->   Operation 90 'store' <Predicate = (!icmp_ln14)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_15 : Operation 91 [1/1] (0.00ns)   --->   "%empty_7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([6 x i8]* @p_str3, i32 %tmp_2) nounwind" [./source/lab4_z4.c:16]   --->   Operation 91 'specregionend' 'empty_7' <Predicate = (!icmp_ln14)> <Delay = 0.00>
+ST_15 : Operation 92 [1/1] (0.00ns)   --->   "br label %.preheader" [./source/lab4_z4.c:14]   --->   Operation 92 'br' <Predicate = (!icmp_ln14)> <Delay = 0.00>
+
+State 16 <SV = 8> <Delay = 0.00>
+ST_16 : Operation 93 [1/1] (0.00ns)   --->   "ret void" [./source/lab4_z4.c:17]   --->   Operation 93 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 0.1ns.
+
+ <State 1>: 2.15ns
+The critical path consists of the following:
+	'getelementptr' operation ('scale_addr', ./source/lab4_z4.c:4) [7]  (0 ns)
+	'load' operation ('scale_load', ./source/lab4_z4.c:8) on array 'scale' [13]  (2.15 ns)
+
+ <State 2>: 2.15ns
+The critical path consists of the following:
+	'load' operation ('scale_load', ./source/lab4_z4.c:8) on array 'scale' [13]  (2.15 ns)
+
+ <State 3>: 3.26ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ./source/lab4_z4.c:7) [17]  (0 ns)
+	'getelementptr' operation ('data_in_addr', ./source/lab4_z4.c:8) [27]  (0 ns)
+	'load' operation ('data_in_load', ./source/lab4_z4.c:8) on array 'data_in' [28]  (3.26 ns)
+
+ <State 4>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('data_in_load', ./source/lab4_z4.c:8) on array 'data_in' [28]  (3.26 ns)
+
+ <State 5>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln8', ./source/lab4_z4.c:8) [29]  (8.47 ns)
+
+ <State 6>: 3.26ns
+The critical path consists of the following:
+	'getelementptr' operation ('temp1_addr', ./source/lab4_z4.c:8) [30]  (0 ns)
+	'store' operation ('store_ln8', ./source/lab4_z4.c:8) of variable 'mul_ln8', ./source/lab4_z4.c:8 on array 'temp1', ./source/lab4_z4.c:6 [31]  (3.26 ns)
+
+ <State 7>: 2.15ns
+The critical path consists of the following:
+	'getelementptr' operation ('scale_addr_2', ./source/lab4_z4.c:12) [38]  (0 ns)
+	'load' operation ('scale_load_2', ./source/lab4_z4.c:12) on array 'scale' [39]  (2.15 ns)
+
+ <State 8>: 2.15ns
+The critical path consists of the following:
+	'load' operation ('scale_load_2', ./source/lab4_z4.c:12) on array 'scale' [39]  (2.15 ns)
+
+ <State 9>: 3.26ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', ./source/lab4_z4.c:11) [42]  (0 ns)
+	'getelementptr' operation ('temp1_addr_1', ./source/lab4_z4.c:12) [52]  (0 ns)
+	'load' operation ('temp1_load', ./source/lab4_z4.c:12) on array 'temp1', ./source/lab4_z4.c:6 [53]  (3.26 ns)
+
+ <State 10>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('temp1_load', ./source/lab4_z4.c:12) on array 'temp1', ./source/lab4_z4.c:6 [53]  (3.26 ns)
+
+ <State 11>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln12', ./source/lab4_z4.c:12) [54]  (8.47 ns)
+
+ <State 12>: 3.26ns
+The critical path consists of the following:
+	'getelementptr' operation ('temp3_addr', ./source/lab4_z4.c:12) [55]  (0 ns)
+	'store' operation ('store_ln12', ./source/lab4_z4.c:12) of variable 'mul_ln12', ./source/lab4_z4.c:12 on array 'temp3', ./source/lab4_z4.c:6 [56]  (3.26 ns)
+
+ <State 13>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('k') with incoming values : ('k', ./source/lab4_z4.c:14) [62]  (1.66 ns)
+
+ <State 14>: 3.26ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', ./source/lab4_z4.c:14) [62]  (0 ns)
+	'getelementptr' operation ('temp2_addr_1', ./source/lab4_z4.c:15) [72]  (0 ns)
+	'load' operation ('temp2_load', ./source/lab4_z4.c:15) on array 'temp2', ./source/lab4_z4.c:6 [73]  (3.26 ns)
+
+ <State 15>: 9.22ns
+The critical path consists of the following:
+	'load' operation ('temp2_load', ./source/lab4_z4.c:15) on array 'temp2', ./source/lab4_z4.c:6 [73]  (3.26 ns)
+	'add' operation ('add_ln15', ./source/lab4_z4.c:15) [76]  (2.7 ns)
+	'store' operation ('store_ln15', ./source/lab4_z4.c:15) of variable 'add_ln15', ./source/lab4_z4.c:15 on array 'data_out' [78]  (3.26 ns)
+
+ <State 16>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

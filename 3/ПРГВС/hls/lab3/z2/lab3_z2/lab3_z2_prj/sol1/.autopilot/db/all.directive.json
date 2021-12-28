@@ -1,0 +1,27 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "lab3_z2",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "ap_bus",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "depth",
+                "value": "1"
+              },
+              {
+                "name": "port",
+                "value": "C_I",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        }]
+    }]}

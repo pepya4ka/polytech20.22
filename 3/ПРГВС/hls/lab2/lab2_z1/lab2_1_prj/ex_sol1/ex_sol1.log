@@ -1,0 +1,270 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 8ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 0.1ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file './source/lab2_1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1271 ; free virtual = 7242
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1271 ; free virtual = 7242
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1268 ; free virtual = 7242
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1268 ; free virtual = 7242
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1252 ; free virtual = 7226
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1252 ; free virtual = 7226
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'find_max' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'find_max' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 27.54 seconds; current allocated memory: 89.703 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 89.796 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'find_max' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'find_max/a_in' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'find_max' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'find_max'.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 90.031 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 214.22 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1250 ; free virtual = 7225
+INFO: [VHDL 208-304] Generating VHDL RTL for find_max.
+INFO: [VLOG 209-307] Generating Verilog RTL for find_max.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-10] Creating and opening solution '/home/sokrat/project/learn/Hybridsystem/homework/hw2/lab2_z1/lab2_1_prj/ex_sol2'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 8ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 0.1ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file './source/lab2_1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1976 ; free virtual = 7513
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1976 ; free virtual = 7513
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1974 ; free virtual = 7513
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1974 ; free virtual = 7513
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1958 ; free virtual = 7497
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1957 ; free virtual = 7496
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'find_max' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'find_max' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 27.48 seconds; current allocated memory: 89.783 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 89.914 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'find_max' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'find_max/a_in' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'find_max' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'find_max'.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 90.131 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 154.06 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1957 ; free virtual = 7497
+INFO: [VHDL 208-304] Generating VHDL RTL for find_max.
+INFO: [VLOG 209-307] Generating Verilog RTL for find_max.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-10] Opening and resetting solution '/home/sokrat/project/learn/Hybridsystem/homework/hw2/lab2_z1/lab2_1_prj/ex_sol2'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 8ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 0.1ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file './source/lab2_1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1924 ; free virtual = 7514
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1924 ; free virtual = 7514
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1921 ; free virtual = 7514
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1921 ; free virtual = 7514
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1905 ; free virtual = 7498
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1905 ; free virtual = 7498
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'find_max' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'find_max' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 27.44 seconds; current allocated memory: 89.785 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 89.915 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'find_max' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'find_max/a_in' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'find_max' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'find_max'.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 90.129 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 141.20 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1904 ; free virtual = 7497
+INFO: [VHDL 208-304] Generating VHDL RTL for find_max.
+INFO: [VLOG 209-307] Generating Verilog RTL for find_max.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-10] Opening and resetting solution '/home/sokrat/project/learn/Hybridsystem/homework/hw2/lab2_z1/lab2_1_prj/ex_sol2'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 8ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 0.1ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file './source/lab2_1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1467 ; free virtual = 7571
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1467 ; free virtual = 7571
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1464 ; free virtual = 7571
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1464 ; free virtual = 7571
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1448 ; free virtual = 7555
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1448 ; free virtual = 7555
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'find_max' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'find_max' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 27.49 seconds; current allocated memory: 89.723 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 89.868 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'find_max' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'find_max/a_in' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'find_max' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'find_max'.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 90.084 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 141.20 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1447 ; free virtual = 7555
+INFO: [VHDL 208-304] Generating VHDL RTL for find_max.
+INFO: [VLOG 209-307] Generating Verilog RTL for find_max.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-10] Opening and resetting solution '/home/sokrat/project/learn/Hybridsystem/homework/hw2/lab2_z1/lab2_1_prj/ex_sol2'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 8ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 0.1ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file './source/lab2_1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:14 ; elapsed = 00:01:19 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1662 ; free virtual = 7166
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:14 ; elapsed = 00:01:19 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1662 ; free virtual = 7166
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:15 ; elapsed = 00:01:20 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1659 ; free virtual = 7166
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:15 ; elapsed = 00:01:20 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1659 ; free virtual = 7166
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:15 ; elapsed = 00:01:20 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1645 ; free virtual = 7152
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:15 ; elapsed = 00:01:20 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1645 ; free virtual = 7152
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'find_max' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'find_max' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 52.89 seconds; current allocated memory: 100.832 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 100.917 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'find_max' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'find_max/a_in' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'find_max' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'find_max'.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 101.061 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 154.06 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 1645 ; free virtual = 7152
+INFO: [VHDL 208-304] Generating VHDL RTL for find_max.
+INFO: [VLOG 209-307] Generating Verilog RTL for find_max.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-10] Opening and resetting solution '/home/sokrat/project/learn/Hybridsystem/homework/hw2/lab2_z1/lab2_1_prj/ex_sol2'.
+INFO: [HLS 200-10] Cleaning up the solution database.

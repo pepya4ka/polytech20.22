@@ -1,0 +1,159 @@
+
+
+================================================================
+== Vivado HLS Report for 'find_max'
+================================================================
+* Date:           Wed Sep 29 10:56:09 2021
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        lab2_1_prj
+* Solution:       ex_sol7
+* Product family: artix7
+* Target device:  xa7a12t-csg325-1Q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +------+----------+----------+------------+
+    | Clock|  Target  | Estimated| Uncertainty|
+    +------+----------+----------+------------+
+    |clk   | 20.00 ns | 6.491 ns |   0.10 ns  |
+    +------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      258|      258| 5.160 us | 5.160 us |  258|  258|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |      256|      256|         2|          -|          -|   128|    no    |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 3 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.25>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%a_in_addr = getelementptr [128 x i32]* %a_in, i64 0, i64 0" [./source/lab2_1.c:3]   --->   Operation 5 'getelementptr' 'a_in_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [2/2] (3.25ns)   --->   "%max = load i32* %a_in_addr, align 4" [./source/lab2_1.c:5]   --->   Operation 6 'load' 'max' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([128 x i32]* %a_in) nounwind, !map !7"   --->   Operation 7 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !13"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([9 x i8]* @find_max_str) nounwind"   --->   Operation 9 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/2] (3.25ns)   --->   "%max = load i32* %a_in_addr, align 4" [./source/lab2_1.c:5]   --->   Operation 10 'load' 'max' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_2 : Operation 11 [1/1] (1.66ns)   --->   "br label %1" [./source/lab2_1.c:6]   --->   Operation 11 'br' <Predicate = true> <Delay = 1.66>
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%max_0 = phi i32 [ %max, %0 ], [ %select_ln7, %._crit_edge ]"   --->   Operation 12 'phi' 'max_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%i_0 = phi i8 [ 0, %0 ], [ %i, %._crit_edge ]"   --->   Operation 13 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 14 [1/1] (1.47ns)   --->   "%icmp_ln6 = icmp eq i8 %i_0, -128" [./source/lab2_1.c:6]   --->   Operation 14 'icmp' 'icmp_ln6' <Predicate = true> <Delay = 1.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 128, i64 128, i64 128) nounwind"   --->   Operation 15 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 16 [1/1] (2.11ns)   --->   "%i = add i8 %i_0, 1" [./source/lab2_1.c:6]   --->   Operation 16 'add' 'i' <Predicate = true> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "br i1 %icmp_ln6, label %2, label %._crit_edge" [./source/lab2_1.c:6]   --->   Operation 17 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln7 = zext i8 %i_0 to i64" [./source/lab2_1.c:7]   --->   Operation 18 'zext' 'zext_ln7' <Predicate = (!icmp_ln6)> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%a_in_addr_1 = getelementptr [128 x i32]* %a_in, i64 0, i64 %zext_ln7" [./source/lab2_1.c:7]   --->   Operation 19 'getelementptr' 'a_in_addr_1' <Predicate = (!icmp_ln6)> <Delay = 0.00>
+ST_3 : Operation 20 [2/2] (3.25ns)   --->   "%max_1 = load i32* %a_in_addr_1, align 4" [./source/lab2_1.c:7]   --->   Operation 20 'load' 'max_1' <Predicate = (!icmp_ln6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "ret i32 %max_0" [./source/lab2_1.c:10]   --->   Operation 21 'ret' <Predicate = (icmp_ln6)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 6.49>
+ST_4 : Operation 22 [1/2] (3.25ns)   --->   "%max_1 = load i32* %a_in_addr_1, align 4" [./source/lab2_1.c:7]   --->   Operation 22 'load' 'max_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_4 : Operation 23 [1/1] (2.43ns)   --->   "%icmp_ln7 = icmp slt i32 %max_0, %max_1" [./source/lab2_1.c:7]   --->   Operation 23 'icmp' 'icmp_ln7' <Predicate = true> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 24 [1/1] (0.79ns)   --->   "%select_ln7 = select i1 %icmp_ln7, i32 %max_1, i32 %max_0" [./source/lab2_1.c:7]   --->   Operation 24 'select' 'select_ln7' <Predicate = true> <Delay = 0.79> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "br label %1" [./source/lab2_1.c:6]   --->   Operation 25 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 20ns, clock uncertainty: 0.1ns.
+
+ <State 1>: 3.26ns
+The critical path consists of the following:
+	'getelementptr' operation ('a_in_addr', ./source/lab2_1.c:3) [3]  (0 ns)
+	'load' operation ('max', ./source/lab2_1.c:5) on array 'a_in' [6]  (3.26 ns)
+
+ <State 2>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('max', ./source/lab2_1.c:5) on array 'a_in' [6]  (3.26 ns)
+
+ <State 3>: 3.26ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ./source/lab2_1.c:6) [10]  (0 ns)
+	'getelementptr' operation ('a_in_addr_1', ./source/lab2_1.c:7) [17]  (0 ns)
+	'load' operation ('max', ./source/lab2_1.c:7) on array 'a_in' [18]  (3.26 ns)
+
+ <State 4>: 6.49ns
+The critical path consists of the following:
+	'load' operation ('max', ./source/lab2_1.c:7) on array 'a_in' [18]  (3.26 ns)
+	'icmp' operation ('icmp_ln7', ./source/lab2_1.c:7) [19]  (2.44 ns)
+	'select' operation ('select_ln7', ./source/lab2_1.c:7) [20]  (0.796 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

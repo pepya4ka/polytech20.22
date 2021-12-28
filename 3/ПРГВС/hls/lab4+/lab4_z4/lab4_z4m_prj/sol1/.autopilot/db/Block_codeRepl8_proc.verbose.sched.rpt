@@ -1,0 +1,136 @@
+
+
+================================================================
+== Vivado HLS Report for 'Block_codeRepl8_proc'
+================================================================
+* Date:           Sun Nov  7 14:28:05 2021
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        lab4_z4m_prj
+* Solution:       sol1
+* Product family: artix7
+* Target device:  xa7a12t-csg325-1Q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +------+----------+----------+------------+
+    | Clock|  Target  | Estimated| Uncertainty|
+    +------+----------+----------+------------+
+    |clk   | 10.00 ns | 6.060 ns |   0.10 ns  |
+    +------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        2|        2| 20.000 ns | 20.000 ns |    2|    2|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.15>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%scale_addr = getelementptr [3 x i32]* %scale, i64 0, i64 0" [./source/lab4_z4.c:20->./source/lab4_z4.c:22]   --->   Operation 4 'getelementptr' 'scale_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [2/2] (2.15ns)   --->   "%tmp1 = load i32* %scale_addr, align 4" [./source/lab4_z4.c:23->./source/lab4_z4.c:22]   --->   Operation 5 'load' 'tmp1' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+
+State 2 <SV = 1> <Delay = 2.15>
+ST_2 : Operation 6 [1/2] (2.15ns)   --->   "%tmp1 = load i32* %scale_addr, align 4" [./source/lab4_z4.c:23->./source/lab4_z4.c:22]   --->   Operation 6 'load' 'tmp1' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%scale_addr_1 = getelementptr [3 x i32]* %scale, i64 0, i64 1" [./source/lab4_z4.c:23->./source/lab4_z4.c:22]   --->   Operation 7 'getelementptr' 'scale_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [2/2] (2.15ns)   --->   "%tmp2 = load i32* %scale_addr_1, align 4" [./source/lab4_z4.c:23->./source/lab4_z4.c:22]   --->   Operation 8 'load' 'tmp2' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%scale_addr_2 = getelementptr [3 x i32]* %scale, i64 0, i64 2" [./source/lab4_z4.c:23->./source/lab4_z4.c:22]   --->   Operation 9 'getelementptr' 'scale_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [2/2] (2.15ns)   --->   "%tmp3 = load i32* %scale_addr_2, align 4" [./source/lab4_z4.c:23->./source/lab4_z4.c:22]   --->   Operation 10 'load' 'tmp3' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+
+State 3 <SV = 2> <Delay = 6.06>
+ST_3 : Operation 11 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecInterface(i32* %tmp3_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str8, [1 x i8]* @p_str9, [1 x i8]* @p_str10, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str11, [1 x i8]* @p_str12)"   --->   Operation 11 'specinterface' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 12 [1/2] (2.15ns)   --->   "%tmp2 = load i32* %scale_addr_1, align 4" [./source/lab4_z4.c:23->./source/lab4_z4.c:22]   --->   Operation 12 'load' 'tmp2' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_3 : Operation 13 [1/2] (2.15ns)   --->   "%tmp3 = load i32* %scale_addr_2, align 4" [./source/lab4_z4.c:23->./source/lab4_z4.c:22]   --->   Operation 13 'load' 'tmp3' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_3 : Operation 14 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %tmp3_out_out, i32 %tmp3)" [./source/lab4_z4.c:23->./source/lab4_z4.c:22]   --->   Operation 14 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i32, i32 } undef, i32 %tmp1, 0" [./source/lab4_z4.c:22]   --->   Operation 15 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i32, i32 } %mrv, i32 %tmp2, 1" [./source/lab4_z4.c:22]   --->   Operation 16 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "ret { i32, i32 } %mrv_1" [./source/lab4_z4.c:22]   --->   Operation 17 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 0.1ns.
+
+ <State 1>: 2.15ns
+The critical path consists of the following:
+	'getelementptr' operation ('scale_addr', ./source/lab4_z4.c:20->./source/lab4_z4.c:22) [4]  (0 ns)
+	'load' operation ('tmp1', ./source/lab4_z4.c:23->./source/lab4_z4.c:22) on array 'scale' [5]  (2.15 ns)
+
+ <State 2>: 2.15ns
+The critical path consists of the following:
+	'load' operation ('tmp1', ./source/lab4_z4.c:23->./source/lab4_z4.c:22) on array 'scale' [5]  (2.15 ns)
+
+ <State 3>: 6.06ns
+The critical path consists of the following:
+	'load' operation ('tmp3', ./source/lab4_z4.c:23->./source/lab4_z4.c:22) on array 'scale' [9]  (2.15 ns)
+	fifo write on port 'tmp3_out_out' (./source/lab4_z4.c:23->./source/lab4_z4.c:22) [10]  (3.91 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

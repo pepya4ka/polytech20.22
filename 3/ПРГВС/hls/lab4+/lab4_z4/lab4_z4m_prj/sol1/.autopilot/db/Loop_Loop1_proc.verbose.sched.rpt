@@ -1,0 +1,179 @@
+
+
+================================================================
+== Vivado HLS Report for 'Loop_Loop1_proc'
+================================================================
+* Date:           Sun Nov  7 14:28:05 2021
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        lab4_z4m_prj
+* Solution:       sol1
+* Product family: artix7
+* Target device:  xa7a12t-csg325-1Q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +------+----------+----------+------------+
+    | Clock|  Target  | Estimated| Uncertainty|
+    +------+----------+----------+------------+
+    |clk   | 10.00 ns | 8.470 ns |   0.10 ns  |
+    +------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    16388|    16388| 0.164 ms | 0.164 ms |  16388|  16388|   none  |
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+-------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- Loop1   |    16386|    16386|         4|          1|          1|  16384|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+-------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 4, States = { 2 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 6 3 
+3 --> 4 
+4 --> 5 
+5 --> 2 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_read_1 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read1)"   --->   Operation 7 'read' 'p_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_read_2 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read)"   --->   Operation 8 'read' 'p_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (1.66ns)   --->   "br label %0"   --->   Operation 9 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%i_0_i_i_i = phi i15 [ 0, %entry ], [ %i, %Loop1 ]"   --->   Operation 10 'phi' 'i_0_i_i_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (2.26ns)   --->   "%icmp_ln24 = icmp eq i15 %i_0_i_i_i, -16384" [./source/lab4_z4.c:24]   --->   Operation 11 'icmp' 'icmp_ln24' <Predicate = true> <Delay = 2.26> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.26> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16384, i64 16384, i64 16384) nounwind"   --->   Operation 12 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (2.14ns)   --->   "%i = add i15 %i_0_i_i_i, 1" [./source/lab4_z4.c:24]   --->   Operation 13 'add' 'i' <Predicate = true> <Delay = 2.14> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "br i1 %icmp_ln24, label %Loop_Loop1_proc.exit, label %Loop1" [./source/lab4_z4.c:24]   --->   Operation 14 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%zext_ln25 = zext i15 %i_0_i_i_i to i64" [./source/lab4_z4.c:25]   --->   Operation 15 'zext' 'zext_ln25' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%data_in_addr = getelementptr [16384 x i32]* %data_in, i64 0, i64 %zext_ln25" [./source/lab4_z4.c:25]   --->   Operation 16 'getelementptr' 'data_in_addr' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_2 : Operation 17 [2/2] (3.25ns)   --->   "%data_in_load = load i32* %data_in_addr, align 4" [./source/lab4_z4.c:25]   --->   Operation 17 'load' 'data_in_load' <Predicate = (!icmp_ln24)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16384> <RAM>
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 18 [1/2] (3.25ns)   --->   "%data_in_load = load i32* %data_in_addr, align 4" [./source/lab4_z4.c:25]   --->   Operation 18 'load' 'data_in_load' <Predicate = (!icmp_ln24)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16384> <RAM>
+
+State 4 <SV = 3> <Delay = 8.47>
+ST_4 : Operation 19 [1/1] (8.47ns)   --->   "%mul_ln25 = mul nsw i32 %data_in_load, %p_read_2" [./source/lab4_z4.c:25]   --->   Operation 19 'mul' 'mul_ln25' <Predicate = (!icmp_ln24)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 20 [1/1] (8.47ns)   --->   "%mul_ln26 = mul nsw i32 %data_in_load, %p_read_1" [./source/lab4_z4.c:26]   --->   Operation 20 'mul' 'mul_ln26' <Predicate = (!icmp_ln24)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 3.25>
+ST_5 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str) nounwind" [./source/lab4_z4.c:24]   --->   Operation 21 'specloopname' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_5 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([6 x i8]* @p_str) nounwind" [./source/lab4_z4.c:24]   --->   Operation 22 'specregionbegin' 'tmp_i' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_5 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind" [./source/lab4_z4.c:25]   --->   Operation 23 'specpipeline' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_5 : Operation 24 [1/1] (0.00ns)   --->   "%temp1_addr = getelementptr inbounds [16384 x i32]* %temp1, i64 0, i64 %zext_ln25" [./source/lab4_z4.c:25]   --->   Operation 24 'getelementptr' 'temp1_addr' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_5 : Operation 25 [1/1] (3.25ns)   --->   "store i32 %mul_ln25, i32* %temp1_addr, align 4" [./source/lab4_z4.c:25]   --->   Operation 25 'store' <Predicate = (!icmp_ln24)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16384> <RAM>
+ST_5 : Operation 26 [1/1] (0.00ns)   --->   "%temp2_addr = getelementptr inbounds [16384 x i32]* %temp2, i64 0, i64 %zext_ln25" [./source/lab4_z4.c:26]   --->   Operation 26 'getelementptr' 'temp2_addr' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_5 : Operation 27 [1/1] (3.25ns)   --->   "store i32 %mul_ln26, i32* %temp2_addr, align 4" [./source/lab4_z4.c:26]   --->   Operation 27 'store' <Predicate = (!icmp_ln24)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16384> <RAM>
+ST_5 : Operation 28 [1/1] (0.00ns)   --->   "%empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([6 x i8]* @p_str, i32 %tmp_i) nounwind" [./source/lab4_z4.c:27]   --->   Operation 28 'specregionend' 'empty_8' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "br label %0" [./source/lab4_z4.c:24]   --->   Operation 29 'br' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+
+State 6 <SV = 2> <Delay = 0.00>
+ST_6 : Operation 30 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 30 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 0.1ns.
+
+ <State 1>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', ./source/lab4_z4.c:24) [10]  (1.66 ns)
+
+ <State 2>: 3.26ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ./source/lab4_z4.c:24) [10]  (0 ns)
+	'getelementptr' operation ('data_in_addr', ./source/lab4_z4.c:25) [20]  (0 ns)
+	'load' operation ('data_in_load', ./source/lab4_z4.c:25) on array 'data_in' [21]  (3.26 ns)
+
+ <State 3>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('data_in_load', ./source/lab4_z4.c:25) on array 'data_in' [21]  (3.26 ns)
+
+ <State 4>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln25', ./source/lab4_z4.c:25) [22]  (8.47 ns)
+
+ <State 5>: 3.26ns
+The critical path consists of the following:
+	'getelementptr' operation ('temp1_addr', ./source/lab4_z4.c:25) [23]  (0 ns)
+	'store' operation ('store_ln25', ./source/lab4_z4.c:25) of variable 'mul_ln25', ./source/lab4_z4.c:25 on array 'temp1' [24]  (3.26 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

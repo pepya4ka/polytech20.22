@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [XFORM 203-713] Argument 'data_in' has read operations in process function 'Loop_Loop1_proc'." projectName="lab4_z4m_prj" solutionName="sol1" date="2021-11-07T14:28:05.010+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'data_in' in the middle of dataflow may stall the dataflow pipeline:" projectName="lab4_z4m_prj" solutionName="sol1" date="2021-11-07T14:28:05.003+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 3 issue(s) in file ./source/lab4_z4.c" projectName="lab4_z4m_prj" solutionName="sol1" date="2021-11-07T14:28:00.267+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ./source/lab4_z4.c:32:2" projectName="lab4_z4m_prj" solutionName="sol1" date="2021-11-07T14:27:56.990+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ./source/lab4_z4.c:28:2" projectName="lab4_z4m_prj" solutionName="sol1" date="2021-11-07T14:27:56.981+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ./source/lab4_z4.c:24:2" projectName="lab4_z4m_prj" solutionName="sol1" date="2021-11-07T14:27:56.970+0300" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

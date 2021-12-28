@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="lab3_z2b.c" path="/home/sokrat/project/learn/Hybridsystem/homework/hw3/lab3_z2/source/lab3_z2b.c"/>
+  </source>
+  <testbench>
+    <originFiles name="lab3_z2_test.c" path="/home/sokrat/project/learn/Hybridsystem/homework/hw3/lab3_z2/source/lab3_z2_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

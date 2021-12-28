@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sokrat/project/learn/Hybridsystem/homework/hw5/lab5_z2/source/lab5_z2.c
+lab5_z2.h
+/home/sokrat/project/learn/Hybridsystem/homework/hw5/lab5_z2/source/lab5_z2.h
+
+/home/sokrat/project/learn/Hybridsystem/homework/hw5/lab5_z2/source/lab5_z2.h
+stdio.h
+-
+
+/home/sokrat/project/learn/Hybridsystem/homework/hw5/lab5_z2/source/lab5_z2_test_modify.c
+stdlib.h
+-
+stdio.h
+-
+time.h
+-
+lab5_z2.h
+/home/sokrat/project/learn/Hybridsystem/homework/hw5/lab5_z2/source/lab5_z2.h
+

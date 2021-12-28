@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1636284486000">
+  <ports id="1" name="data_in" type="PortType" originalName="data_in" coreName="RAM" bitwidth="32" iftype="IfTypeRegister" arraysize="16384">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="scale" type="PortType" originalName="scale" coreName="RAM" bitwidth="32" iftype="IfTypeRegister" arraysize="3">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="data_out" type="PortType" originalName="data_out" coreName="RAM" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="16384">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <edges id="32" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="33" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="38" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="40" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="42" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="45" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="46" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="47" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="48" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="49" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="52" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="53" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="54" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@ports.2"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" id="171" RegionName="foo_m">
+    <basic_blocks id="23" name="foo_m" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="4" name="tmp3_loc_c" rtlName="tmp3_loc_c_U" coreName="FIFO" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="temp1" lineNumber="22" originalName="temp1" fileName="./source/lab4_z4.c" fileDirectory=".." rtlName="temp1_U" coreName="RAM" contextFuncName="foo_m" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="22" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_m"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="temp2" lineNumber="22" originalName="temp2" fileName="./source/lab4_z4.c" fileDirectory=".." rtlName="temp2_U" coreName="RAM" contextFuncName="foo_m" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="22" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_m"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="temp3" lineNumber="22" originalName="temp3" fileName="./source/lab4_z4.c" fileDirectory=".." rtlName="temp3_U" coreName="RAM" contextFuncName="foo_m" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="22" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_m"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="temp4" lineNumber="22" originalName="temp4" fileName="./source/lab4_z4.c" fileDirectory=".." rtlName="temp4_U" coreName="RAM" contextFuncName="foo_m" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="22" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_m"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="call_ret" rtlName="Block_codeRepl8_proc_U0" bitwidth="64" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <dataInputObjs>scale</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>Block_codeRepl8_proc</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="_ln0" rtlName="Loop_Loop1_proc_U0" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <dataInputObjs>data_in</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>call</dataInputObjs>
+        <dataInputObjs>call</dataInputObjs>
+        <constName>Loop_Loop1_proc</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="_ln0" rtlName="Loop_Loop2_proc_U0" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>Loop_Loop2_proc</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln0" rtlName="Loop_Loop3_proc_U0" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>data_out</dataOutputObjs>
+        <constName>Loop_Loop3_proc</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="_ln35" lineNumber="35" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_m" opcode="ret" nodeLabel="6.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="35" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_m"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="./source/lab4_z4.c">
+        <validLinenumbers>22</validLinenumbers>
+        <validLinenumbers>35</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <regnodes realName="tmp1_loc_channel_reg_130">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp2_loc_channel_reg_135">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp3_loc_c_reg_124">
+    <nodeIds>4</nodeIds>
+  </regnodes>
+  <expressionNodes realName="temp4_alloca_fu_76">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp3_alloca_fu_72">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp2_loc_channel_fu_119">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp1_loc_channel_fu_114">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp3_loc_c_fu_60">
+    <nodeIds>4</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp1_alloca_fu_64">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp2_alloca_fu_68">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_Loop_Loop3_proc_fu_99">
+    <nodeIds>21</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Block_codeRepl8_proc_fu_107">
+    <nodeIds>16</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Loop_Loop2_proc_fu_90">
+    <nodeIds>20</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Loop_Loop1_proc_fu_80">
+    <nodeIds>19</nodeIds>
+  </moduleNodes>
+  <fsm>
+    <states id="1">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="16" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="16" stage="1" latency="2"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="19" stage="1" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="20" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="20" stage="1" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="21" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="2"/>
+      <operations id="22" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="foo_m" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="49167" mMaxLatency="49167" mIsDfPipe="true">
+      <basicBlocks>23</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.1/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.2/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.3/@pins.0/@inst">
+        <processe_list name="Block_codeRepl8_proc_U0" ssdmobj_id="16">
+          <pins>
+            <port name="scale" dir="DirInOut"/>
+            <inst name="Block_codeRepl8_proc_U0" ssdmobj_id="16" object_id="_59"/>
+          </pins>
+          <pins>
+            <port name="tmp3_out_out" type="BUSType"/>
+            <inst name="Block_codeRepl8_proc_U0" ssdmobj_id="16" object_id="_59"/>
+          </pins>
+          <pins>
+            <port name="ap_return" dir="DirEnd" type="BUSType"/>
+            <inst name="Block_codeRepl8_proc_U0" ssdmobj_id="16" object_id="_59"/>
+          </pins>
+          <pins>
+            <port name="ap_return" dir="DirEnd" type="BUSType"/>
+            <inst name="Block_codeRepl8_proc_U0" ssdmobj_id="16" object_id="_59"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Loop_Loop1_proc_U0" ssdmobj_id="19">
+          <pins>
+            <port name="data_in" dir="DirInOut"/>
+            <inst name="Loop_Loop1_proc_U0" ssdmobj_id="19" object_id="_69"/>
+          </pins>
+          <pins>
+            <port name="p_read" dir="DirEnd"/>
+            <inst name="Loop_Loop1_proc_U0" ssdmobj_id="19" object_id="_69"/>
+          </pins>
+          <pins>
+            <port name="temp1" dir="DirInOut" type="BUSType"/>
+            <inst name="Loop_Loop1_proc_U0" ssdmobj_id="19" object_id="_69"/>
+          </pins>
+          <pins>
+            <port name="p_read1" dir="DirEnd"/>
+            <inst name="Loop_Loop1_proc_U0" ssdmobj_id="19" object_id="_69"/>
+          </pins>
+          <pins>
+            <port name="temp2" dir="DirInOut" type="BUSType"/>
+            <inst name="Loop_Loop1_proc_U0" ssdmobj_id="19" object_id="_69"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Loop_Loop2_proc_U0" ssdmobj_id="20">
+          <pins>
+            <port name="temp1" dir="DirInOut"/>
+            <inst name="Loop_Loop2_proc_U0" ssdmobj_id="20" object_id="_81"/>
+          </pins>
+          <pins>
+            <port name="tmp3_loc"/>
+            <inst name="Loop_Loop2_proc_U0" ssdmobj_id="20" object_id="_81"/>
+          </pins>
+          <pins>
+            <port name="temp3" dir="DirInOut" type="BUSType"/>
+            <inst name="Loop_Loop2_proc_U0" ssdmobj_id="20" object_id="_81"/>
+          </pins>
+          <pins>
+            <port name="temp2" dir="DirInOut"/>
+            <inst name="Loop_Loop2_proc_U0" ssdmobj_id="20" object_id="_81"/>
+          </pins>
+          <pins>
+            <port name="temp4" dir="DirInOut" type="BUSType"/>
+            <inst name="Loop_Loop2_proc_U0" ssdmobj_id="20" object_id="_81"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Loop_Loop3_proc_U0" ssdmobj_id="21">
+          <pins>
+            <port name="temp4" dir="DirInOut"/>
+            <inst name="Loop_Loop3_proc_U0" ssdmobj_id="21" object_id="_93"/>
+          </pins>
+          <pins>
+            <port name="temp3" dir="DirInOut"/>
+            <inst name="Loop_Loop3_proc_U0" ssdmobj_id="21" object_id="_93"/>
+          </pins>
+          <pins>
+            <port name="data_out" dir="DirInOut" type="BUSType"/>
+            <inst name="Loop_Loop3_proc_U0" ssdmobj_id="21" object_id="_93"/>
+          </pins>
+        </processe_list>
+        <channel_list depth="3" bitwidth="32" name="tmp3_loc_c" ssdmobj_id="4">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Block_codeRepl8_proc_U0" ssdmobj_id="16" object_id="_59"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Loop2_proc_U0" ssdmobj_id="20" object_id="_81"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" name="tmp1_loc_channel" ssdmobj_id="17">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Block_codeRepl8_proc_U0" ssdmobj_id="16" object_id="_59"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Loop1_proc_U0" ssdmobj_id="19" object_id="_69"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" name="tmp2_loc_channel" ssdmobj_id="18">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Block_codeRepl8_proc_U0" ssdmobj_id="16" object_id="_59"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Loop1_proc_U0" ssdmobj_id="19" object_id="_69"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="temp1" ssdmobj_id="10">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_Loop1_proc_U0" ssdmobj_id="19" object_id="_69"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Loop2_proc_U0" ssdmobj_id="20" object_id="_81"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="temp2" ssdmobj_id="11">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_Loop1_proc_U0" ssdmobj_id="19" object_id="_69"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Loop2_proc_U0" ssdmobj_id="20" object_id="_81"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="temp3" ssdmobj_id="12">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_Loop2_proc_U0" ssdmobj_id="20" object_id="_81"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Loop3_proc_U0" ssdmobj_id="21" object_id="_93"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="temp4" ssdmobj_id="13">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_Loop2_proc_U0" ssdmobj_id="20" object_id="_81"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Loop3_proc_U0" ssdmobj_id="21" object_id="_93"/>
+          </sink>
+        </channel_list>
+      </mDfPipe>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

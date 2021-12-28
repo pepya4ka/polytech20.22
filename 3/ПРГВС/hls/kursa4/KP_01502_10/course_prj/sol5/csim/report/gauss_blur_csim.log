@@ -1,0 +1,20 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../source/course_prj_test.c in debug mode
+INFO: [HLS 200-10] Running '/home/sokrat/tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'sokrat' on host 'Lenovo-V110' (Linux_x86_64 version 5.4.0-59-generic) on Mon Nov 29 16:19:59 MSK 2021
+INFO: [HLS 200-10] On os Ubuntu 20.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/sokrat/project/learn/Hybridsystem/KP_01502_10/course_prj/sol5/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sokrat/1433001638191999202125
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../source/course_prj.c in debug mode
+INFO: [HLS 200-10] Running '/home/sokrat/tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'sokrat' on host 'Lenovo-V110' (Linux_x86_64 version 5.4.0-59-generic) on Mon Nov 29 16:20:07 MSK 2021
+INFO: [HLS 200-10] On os Ubuntu 20.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/sokrat/project/learn/Hybridsystem/KP_01502_10/course_prj/sol5/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sokrat/1433571638192007919493
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+----------Pass!------------
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

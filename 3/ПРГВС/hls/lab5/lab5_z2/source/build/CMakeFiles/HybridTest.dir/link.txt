@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/HybridTest.dir/lab5_z2_test_modify.c.o CMakeFiles/HybridTest.dir/lab5_z2.c.o -o HybridTest 

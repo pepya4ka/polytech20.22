@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/./sim/autowrap/testbench/lab4_z4.c_pre.c.tb.c

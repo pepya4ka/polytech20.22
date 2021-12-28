@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sokrat/project/learn/Hybridsystem/KP_01502_10/source/course_prj.c
+stdio.h
+-
+course_prj.h
+/home/sokrat/project/learn/Hybridsystem/KP_01502_10/source/course_prj.h
+
+/home/sokrat/project/learn/Hybridsystem/KP_01502_10/source/course_prj.h
+
+/home/sokrat/project/learn/Hybridsystem/KP_01502_10/source/course_prj_modify.c
+stdlib.h
+-
+stdio.h
+-
+time.h
+-
+course_prj.h
+/home/sokrat/project/learn/Hybridsystem/KP_01502_10/source/course_prj.h
+

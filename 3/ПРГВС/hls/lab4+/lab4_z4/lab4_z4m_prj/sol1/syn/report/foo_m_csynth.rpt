@@ -1,0 +1,228 @@
+
+
+================================================================
+== Vivado HLS Report for 'foo_m'
+================================================================
+* Date:           Sun Nov  7 14:28:05 2021
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        lab4_z4m_prj
+* Solution:       sol1
+* Product family: artix7
+* Target device:  xa7a12t-csg325-1Q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +------+----------+----------+------------+
+    | Clock|  Target  | Estimated| Uncertainty|
+    +------+----------+----------+------------+
+    |clk   | 10.00 ns | 9.216 ns |   0.10 ns  |
+    +------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+----------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
+    +---------+---------+----------+----------+-------+-------+----------+
+    |    49167|    49167| 0.492 ms | 0.492 ms |  16389|  16389| dataflow |
+    +---------+---------+----------+----------+-------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+----------------------+---------+---------+-----------+-----------+-------+-------+---------+
+        |                         |                      |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+        |         Instance        |        Module        |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
+        +-------------------------+----------------------+---------+---------+-----------+-----------+-------+-------+---------+
+        |Loop_Loop1_proc_U0       |Loop_Loop1_proc       |    16388|    16388|  0.164 ms |  0.164 ms |  16388|  16388|   none  |
+        |Loop_Loop2_proc_U0       |Loop_Loop2_proc       |    16388|    16388|  0.164 ms |  0.164 ms |  16388|  16388|   none  |
+        |Loop_Loop3_proc_U0       |Loop_Loop3_proc       |    16386|    16386|  0.164 ms |  0.164 ms |  16386|  16386|   none  |
+        |Block_codeRepl8_proc_U0  |Block_codeRepl8_proc  |        2|        2| 20.000 ns | 20.000 ns |      2|      2|   none  |
+        +-------------------------+----------------------+---------+---------+-----------+-----------+-------+-------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT | URAM|
++-----------------+---------+-------+-------+------+-----+
+|DSP              |        -|      -|      -|     -|    -|
+|Expression       |        -|      -|      0|    66|    -|
+|FIFO             |        0|      -|     15|   126|    -|
+|Instance         |        0|      9|    599|   586|    -|
+|Memory           |      128|      -|      0|     0|    0|
+|Multiplexer      |        -|      -|      -|    90|    -|
+|Register         |        -|      -|     12|     -|    -|
++-----------------+---------+-------+-------+------+-----+
+|Total            |      128|      9|    626|   868|    0|
++-----------------+---------+-------+-------+------+-----+
+|Available        |       40|     40|  16000|  8000|    0|
++-----------------+---------+-------+-------+------+-----+
+|Utilization (%)  |      320|     22|      3|    10|    0|
++-----------------+---------+-------+-------+------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+-----+-----+-----+
+    |         Instance        |        Module        | BRAM_18K| DSP48E|  FF | LUT | URAM|
+    +-------------------------+----------------------+---------+-------+-----+-----+-----+
+    |Block_codeRepl8_proc_U0  |Block_codeRepl8_proc  |        0|      0|   36|   56|    0|
+    |Loop_Loop1_proc_U0       |Loop_Loop1_proc       |        0|      6|  263|  204|    0|
+    |Loop_Loop2_proc_U0       |Loop_Loop2_proc       |        0|      3|  263|  192|    0|
+    |Loop_Loop3_proc_U0       |Loop_Loop3_proc       |        0|      0|   37|  134|    0|
+    +-------------------------+----------------------+---------+-------+-----+-----+-----+
+    |Total                    |                      |        0|      9|  599|  586|    0|
+    +-------------------------+----------------------+---------+-------+-----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +---------+-------------+---------+---+----+-----+-------+-----+------+-------------+
+    |  Memory |    Module   | BRAM_18K| FF| LUT| URAM| Words | Bits| Banks| W*Bits*Banks|
+    +---------+-------------+---------+---+----+-----+-------+-----+------+-------------+
+    |temp1_U  |foo_m_temp1  |       32|  0|   0|    0|  16384|   32|     2|      1048576|
+    |temp2_U  |foo_m_temp1  |       32|  0|   0|    0|  16384|   32|     2|      1048576|
+    |temp3_U  |foo_m_temp1  |       32|  0|   0|    0|  16384|   32|     2|      1048576|
+    |temp4_U  |foo_m_temp1  |       32|  0|   0|    0|  16384|   32|     2|      1048576|
+    +---------+-------------+---------+---+----+-----+-------+-----+------+-------------+
+    |Total    |             |      128|  0|   0|    0|  65536|  128|     8|      4194304|
+    +---------+-------------+---------+---+----+-----+-------+-----+------+-------------+
+
+    * FIFO: 
+    +--------------------+---------+---+----+-----+------+-----+---------+
+    |        Name        | BRAM_18K| FF| LUT| URAM| Depth| Bits| Size:D*B|
+    +--------------------+---------+---+----+-----+------+-----+---------+
+    |tmp1_loc_channel_U  |        0|  5|   0|    -|     2|   32|       64|
+    |tmp2_loc_channel_U  |        0|  5|   0|    -|     2|   32|       64|
+    |tmp3_loc_c_U        |        0|  5|   0|    -|     3|   32|       96|
+    +--------------------+---------+---+----+-----+------+-----+---------+
+    |Total               |        0| 15|   0|    0|     7|   96|      224|
+    +--------------------+---------+---+----+-----+------+-----+---------+
+
+    * Expression: 
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+    |               Variable Name              | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+    |Block_codeRepl8_proc_U0_ap_ready_count    |     +    |      0|  0|  10|           2|           1|
+    |Loop_Loop1_proc_U0_ap_ready_count         |     +    |      0|  0|  10|           2|           1|
+    |Block_codeRepl8_proc_U0_ap_continue       |    and   |      0|  0|   2|           1|           1|
+    |Block_codeRepl8_proc_U0_ap_start          |    and   |      0|  0|   2|           1|           1|
+    |Loop_Loop1_proc_U0_ap_continue            |    and   |      0|  0|   2|           1|           1|
+    |Loop_Loop1_proc_U0_ap_start               |    and   |      0|  0|   2|           1|           1|
+    |Loop_Loop2_proc_U0_ap_continue            |    and   |      0|  0|   2|           1|           1|
+    |Loop_Loop2_proc_U0_ap_start               |    and   |      0|  0|   2|           1|           1|
+    |Loop_Loop3_proc_U0_ap_start               |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_temp1                     |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_temp2                     |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_temp3                     |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_temp4                     |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_tmp1_loc_channel          |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_tmp2_loc_channel          |    and   |      0|  0|   2|           1|           1|
+    |ap_idle                                   |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_ready                             |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_Block_codeRepl8_proc_U0_ap_ready  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_Loop_Loop1_proc_U0_ap_ready       |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_temp1               |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_temp2               |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_temp3               |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_temp4               |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp1_loc_channel    |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp2_loc_channel    |    or    |      0|  0|   2|           1|           1|
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                     |          |      0|  0|  66|          27|          25|
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |                     Name                     | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |Block_codeRepl8_proc_U0_ap_ready_count        |   9|          2|    2|          4|
+    |Loop_Loop1_proc_U0_ap_ready_count             |   9|          2|    2|          4|
+    |ap_sync_reg_Block_codeRepl8_proc_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_Loop_Loop1_proc_U0_ap_ready       |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_temp1               |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_temp2               |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_temp3               |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_temp4               |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp1_loc_channel    |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp2_loc_channel    |   9|          2|    1|          2|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |Total                                         |  90|         20|   12|         24|
+    +----------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------+---+----+-----+-----------+
+    |                     Name                     | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------+---+----+-----+-----------+
+    |Block_codeRepl8_proc_U0_ap_ready_count        |  2|   0|    2|          0|
+    |Loop_Loop1_proc_U0_ap_ready_count             |  2|   0|    2|          0|
+    |ap_sync_reg_Block_codeRepl8_proc_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_Loop_Loop1_proc_U0_ap_ready       |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_temp1               |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_temp2               |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_temp3               |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_temp4               |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp1_loc_channel    |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp2_loc_channel    |  1|   0|    1|          0|
+    +----------------------------------------------+---+----+-----+-----------+
+    |Total                                         | 12|   0|   12|          0|
+    +----------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-------------------+-----+-----+------------+--------------+--------------+
+|ap_clk             |  in |    1| ap_ctrl_hs |     foo_m    | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs |     foo_m    | return value |
+|ap_start           |  in |    1| ap_ctrl_hs |     foo_m    | return value |
+|ap_done            | out |    1| ap_ctrl_hs |     foo_m    | return value |
+|ap_ready           | out |    1| ap_ctrl_hs |     foo_m    | return value |
+|ap_idle            | out |    1| ap_ctrl_hs |     foo_m    | return value |
+|data_in_address0   | out |   14|  ap_memory |    data_in   |     array    |
+|data_in_ce0        | out |    1|  ap_memory |    data_in   |     array    |
+|data_in_d0         | out |   32|  ap_memory |    data_in   |     array    |
+|data_in_q0         |  in |   32|  ap_memory |    data_in   |     array    |
+|data_in_we0        | out |    1|  ap_memory |    data_in   |     array    |
+|data_in_address1   | out |   14|  ap_memory |    data_in   |     array    |
+|data_in_ce1        | out |    1|  ap_memory |    data_in   |     array    |
+|data_in_d1         | out |   32|  ap_memory |    data_in   |     array    |
+|data_in_q1         |  in |   32|  ap_memory |    data_in   |     array    |
+|data_in_we1        | out |    1|  ap_memory |    data_in   |     array    |
+|scale_address0     | out |    2|  ap_memory |     scale    |     array    |
+|scale_ce0          | out |    1|  ap_memory |     scale    |     array    |
+|scale_d0           | out |   32|  ap_memory |     scale    |     array    |
+|scale_q0           |  in |   32|  ap_memory |     scale    |     array    |
+|scale_we0          | out |    1|  ap_memory |     scale    |     array    |
+|scale_address1     | out |    2|  ap_memory |     scale    |     array    |
+|scale_ce1          | out |    1|  ap_memory |     scale    |     array    |
+|scale_d1           | out |   32|  ap_memory |     scale    |     array    |
+|scale_q1           |  in |   32|  ap_memory |     scale    |     array    |
+|scale_we1          | out |    1|  ap_memory |     scale    |     array    |
+|data_out_address0  | out |   14|  ap_memory |   data_out   |     array    |
+|data_out_ce0       | out |    1|  ap_memory |   data_out   |     array    |
+|data_out_d0        | out |   32|  ap_memory |   data_out   |     array    |
+|data_out_q0        |  in |   32|  ap_memory |   data_out   |     array    |
+|data_out_we0       | out |    1|  ap_memory |   data_out   |     array    |
+|data_out_address1  | out |   14|  ap_memory |   data_out   |     array    |
+|data_out_ce1       | out |    1|  ap_memory |   data_out   |     array    |
+|data_out_d1        | out |   32|  ap_memory |   data_out   |     array    |
+|data_out_q1        |  in |   32|  ap_memory |   data_out   |     array    |
+|data_out_we1       | out |    1|  ap_memory |   data_out   |     array    |
++-------------------+-----+-----+------------+--------------+--------------+
+

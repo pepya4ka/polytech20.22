@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'gauss_blur' consists of the following:&#xA;&#x9;'add' operation ('outcol', ./source/course_prj.c:70) [178]  (2.13 ns)&#xA;&#x9;'icmp' operation ('icmp_ln73_2', ./source/course_prj.c:73) [179]  (1.81 ns)&#xA;&#x9;'or' operation ('or_ln73', ./source/course_prj.c:73) [181]  (0 ns)&#xA;&#x9;'or' operation ('or_ln73_2', ./source/course_prj.c:73) [183]  (0.978 ns)&#xA;&#x9;blocking operation 1.96 ns on control path)" projectName="course_prj" solutionName="sol8" date="2021-11-30T11:55:04.982+0300" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (6.875ns) exceeds the target (target clock period: 6ns, clock uncertainty: 0.1ns, effective delay budget: 5.9ns)." projectName="course_prj" solutionName="sol8" date="2021-11-30T11:55:04.978+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-124] Array  'outImage': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order." projectName="course_prj" solutionName="sol8" date="2021-11-30T11:55:04.597+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-124] Array  'inImage': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order." projectName="course_prj" solutionName="sol8" date="2021-11-30T11:55:04.551+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-124] Array  'outImage': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order." projectName="course_prj" solutionName="sol7" date="2021-11-30T11:49:08.519+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-124] Array  'inImage': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order." projectName="course_prj" solutionName="sol7" date="2021-11-30T11:49:08.460+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-124] Array  'outImage': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order." projectName="course_prj" solutionName="sol6" date="2021-11-30T11:47:07.802+0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-124] Array  'inImage': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order." projectName="course_prj" solutionName="sol6" date="2021-11-30T11:47:07.730+0300" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

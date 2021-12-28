@@ -1,0 +1,43 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="gauss_blur" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_fifo" value="" positionalBoolean="mode"/>
+                <option name="port" value="inImage" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="gauss_blur" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_fifo" value="" positionalBoolean="mode"/>
+                <option name="port" value="outImage" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="gauss_blur" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="window" positionalBoolean="4"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
+                <option name="factor" value="3"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="gauss_blur" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="kernel" positionalBoolean="4"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
+                <option name="factor" value="3"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="filter" label="col_loop" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="skip_exit_check" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="gauss_blur" label="L1" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

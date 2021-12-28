@@ -1,0 +1,8 @@
+<annotationInfo>
+<item  id="12" filename="./source/lab3_z2s.c" linenumber="5" name="icmp_ln5" contextFuncName="lab3_z2" moduleName="lab3_z2" rtlName="icmp_ln5_fu_121_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="13" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw3/lab3_z2"><\/item>
+<item  id="14" filename="./source/lab3_z2s.c" linenumber="5" name="i" contextFuncName="lab3_z2" moduleName="lab3_z2" rtlName="i_fu_127_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="16" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw3/lab3_z2"><\/item>
+<item  id="17" filename="./source/lab3_z2s.c" linenumber="6" name="zext_ln6" contextFuncName="lab3_z2" moduleName="lab3_z2" rtlName="zext_ln6_fu_133_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw3/lab3_z2"><\/item>
+<item  id="25" filename="./source/lab3_z2s.c" linenumber="7" name="icmp_ln7" contextFuncName="lab3_z2" moduleName="lab3_z2" rtlName="icmp_ln7_fu_138_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw3/lab3_z2"><\/item>
+<item  id="27" filename="./source/lab3_z2s.c" linenumber="7" name="j" contextFuncName="lab3_z2" moduleName="lab3_z2" rtlName="j_fu_144_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw3/lab3_z2"><\/item>
+<item  id="31" filename="./source/lab3_z2s.c" linenumber="8" name="macc_1" contextFuncName="lab3_z2" moduleName="lab3_z2" rtlName="lab3_z2_mul_32s_3bkb_U1" latency="2" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw3/lab3_z2"><\/item>
+</annotationInfo>

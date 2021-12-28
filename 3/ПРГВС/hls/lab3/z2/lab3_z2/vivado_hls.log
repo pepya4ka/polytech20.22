@@ -1,0 +1,97 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /home/sokrat/tools/Xilinx/Vivado/2020.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/home/sokrat/tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'sokrat' on host 'Lenovo-V110' (Linux_x86_64 version 5.4.0-59-generic) on Fri Oct 08 16:12:57 MSK 2021
+INFO: [HLS 200-10] On os Ubuntu 20.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/sokrat/project/learn/Hybridsystem/homework/hw3/lab3_z2'
+Sourcing Tcl script 'lab3_2.tcl'
+INFO: [HLS 200-10] Opening and resetting project '/home/sokrat/project/learn/Hybridsystem/homework/hw3/lab3_z2/lab3_z2_prj'.
+INFO: [HLS 200-10] Adding test bench file './source/lab3_z2_test.c' to the project
+INFO: [HLS 200-10] Opening and resetting solution '/home/sokrat/project/learn/Hybridsystem/homework/hw3/lab3_z2/lab3_z2_prj/sol1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Adding design file './source/lab3_z2s.c' to the project
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 6ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 0.1ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../source/lab3_z2_test.c in debug mode
+INFO: [HLS 200-10] Running '/home/sokrat/tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'sokrat' on host 'Lenovo-V110' (Linux_x86_64 version 5.4.0-59-generic) on Fri Oct 08 16:13:00 MSK 2021
+INFO: [HLS 200-10] On os Ubuntu 20.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/sokrat/project/learn/Hybridsystem/homework/hw3/lab3_z2/lab3_z2_prj/sol1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sokrat/2419001633698780689739
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../source/lab3_z2s.c in debug mode
+INFO: [HLS 200-10] Running '/home/sokrat/tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'sokrat' on host 'Lenovo-V110' (Linux_x86_64 version 5.4.0-59-generic) on Fri Oct 08 16:13:09 MSK 2021
+INFO: [HLS 200-10] On os Ubuntu 20.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/sokrat/project/learn/Hybridsystem/homework/hw3/lab3_z2/lab3_z2_prj/sol1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sokrat/2419611633698789452318
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+----------Pass!------------
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file './source/lab3_z2s.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 2636 ; free virtual = 7007
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 2636 ; free virtual = 7007
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 2632 ; free virtual = 7005
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 2632 ; free virtual = 7005
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 2615 ; free virtual = 6988
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 16 on port 'C_I' (./source/lab3_z2s.c:8:4). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 2614 ; free virtual = 6987
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lab3_z2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lab3_z2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 27.36 seconds; current allocated memory: 90.311 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 90.511 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lab3_z2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab3_z2/D_I' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab3_z2/C_I' to 'ap_bus'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab3_z2/D_O' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lab3_z2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'lab3_z2_mul_32s_32s_32_3_1' to 'lab3_z2_mul_32s_3bkb' due to the length limit 20
+WARNING: [RTGEN 206-101] Setting dangling out port 'lab3_z2/C_I_dataout' to 0.
+INFO: [RTGEN 206-100] Generating core module 'lab3_z2_mul_32s_3bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lab3_z2'.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 90.781 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 169.49 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'lab3_z2_mul_32s_3bkb_MulnS_0'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 1504.332 ; gain = 1099.754 ; free physical = 2612 ; free virtual = 6987
+INFO: [VHDL 208-304] Generating VHDL RTL for lab3_z2.
+INFO: [VLOG 209-307] Generating Verilog RTL for lab3_z2.
+INFO: [HLS 200-10] Opening and resetting solution '/home/sokrat/project/learn/Hybridsystem/homework/hw3/lab3_z2/lab3_z2_prj/sol2'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+invalid command name "remove_files"
+    while executing
+"remove_files lab3_z2s.c"
+    (file "lab3_2.tcl" line 29)
+    invoked from within
+"source lab3_2.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $arg] "
+
+INFO: [HLS 200-112] Total elapsed time: 28.24 seconds; peak allocated memory: 90.781 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Fri Oct  8 16:13:25 2021...

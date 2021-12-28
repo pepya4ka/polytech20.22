@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="course_prj.c" path="/home/sokrat/project/learn/Hybridsystem/KP_01502_10/source/course_prj.c"/>
+  </source>
+  <testbench>
+    <originFiles name="course_prj_test.c" path="/home/sokrat/project/learn/Hybridsystem/KP_01502_10/source/course_prj_test.c"/>
+    <originFiles name="testdata" path="/home/sokrat/project/learn/Hybridsystem/KP_01502_10/source/testdata"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1636283581000">
+  <ports id="1" name="data_in" type="PortType" originalName="data_in" coreName="RAM" bitwidth="32" iftype="IfTypeRegister" arraysize="16384">
+    <dataOutputObjs>load</dataOutputObjs>
+  </ports>
+  <ports id="2" name="scale" type="PortType" originalName="scale" coreName="RAM" bitwidth="32" iftype="IfTypeRegister" arraysize="3">
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+  </ports>
+  <ports id="3" name="data_out" type="PortType" originalName="data_out" coreName="RAM" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="16384"/>
+  <edges id="97" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="100" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="101" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="102" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="103" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="106" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="109" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="110" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="111" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="117" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="123" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="124" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="128" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="130" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="131" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="135" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="137" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="138" source_obj="//@regions.1/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="139" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="141" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0"/>
+  <edges id="142" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.1"/>
+  <edges id="144" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.2"/>
+  <edges id="146" source_obj="//@regions.1/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="147" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="148" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="149" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="155" source_obj="//@regions.1/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.1"/>
+  <edges id="156" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.1"/>
+  <edges id="160" source_obj="//@regions.1/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.2"/>
+  <edges id="162" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.3"/>
+  <edges id="163" source_obj="//@regions.2/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="164" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.1" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="166" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.0"/>
+  <edges id="167" source_obj="//@regions.2/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.1"/>
+  <edges id="169" source_obj="//@regions.2/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.2"/>
+  <edges id="171" source_obj="//@regions.2/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.3"/>
+  <edges id="172" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.1" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.3"/>
+  <edges id="173" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.3"/>
+  <edges id="183" source_obj="//@regions.2/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.2"/>
+  <edges id="184" source_obj="//@regions.2/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.2"/>
+  <edges id="188" source_obj="//@regions.2/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.3"/>
+  <edges id="190" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.0" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.4"/>
+  <edges id="271" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="272" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="273" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="274" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="275" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.1/@basic_blocks.0"/>
+  <edges id="276" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@blocks.2"/>
+  <edges id="277" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.1"/>
+  <edges id="278" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="279" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.2/@basic_blocks.0"/>
+  <edges id="280" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.0" sink_obj="//@blocks.3"/>
+  <edges id="281" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.0" sink_obj="//@regions.2/@basic_blocks.1"/>
+  <edges id="282" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.1" sink_obj="//@regions.2/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.0"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.2"/>
+  <edges id="-1" source_obj="//@regions.2/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.0"/>
+  <edges id="-1" source_obj="//@regions.2/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.1"/>
+  <edges id="-1" source_obj="//@regions.2/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.3"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.1"/>
+  <blocks id="16" name="block_16" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_22</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="temp1" lineNumber="6" originalName="temp1" fileName="./source/lab4_z4.c" fileDirectory=".." rtlName="temp1_U" coreName="RAM" contextFuncName="foo_b" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="6" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="temp2" lineNumber="6" originalName="temp2" fileName="./source/lab4_z4.c" fileDirectory=".." rtlName="temp2_U" coreName="RAM" contextFuncName="foo_b" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="6" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="temp3" lineNumber="6" originalName="temp3" fileName="./source/lab4_z4.c" fileDirectory=".." rtlName="temp3_U" coreName="RAM" contextFuncName="foo_b" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="6" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="scale_load" lineNumber="8" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="8" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+      <dataInputObjs>scale</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="scale_load_1" lineNumber="9" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="9" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+      <dataInputObjs>scale</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="_ln7" lineNumber="7" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" opcode="br" nodeLabel="1.0" m_display="0" m_delay="1.66" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="7" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+      <controlInputObjs>block_22</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="./source/lab4_z4.c">
+      <validLinenumbers>6</validLinenumbers>
+      <validLinenumbers>8</validLinenumbers>
+      <validLinenumbers>9</validLinenumbers>
+      <validLinenumbers>7</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="41" name=".preheader1.preheader" type="BlockType">
+    <controlInputObjs>block_22</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.preheader1</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="scale_load_2" lineNumber="12" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" bitwidth="32" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="12" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+      <dataInputObjs>scale</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="_ln11" lineNumber="11" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" opcode="br" nodeLabel="7.0" m_display="0" m_delay="1.66" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="11" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+      <controlInputObjs>.preheader1</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="./source/lab4_z4.c">
+      <validLinenumbers>12</validLinenumbers>
+      <validLinenumbers>11</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="61" name=".preheader.preheader" type="BlockType">
+    <controlInputObjs>.preheader1</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.preheader</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="_ln14" lineNumber="14" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" opcode="br" nodeLabel="12.0" m_display="0" m_delay="1.66" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="14" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+      <controlInputObjs>.preheader</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="./source/lab4_z4.c">
+      <validLinenumbers>14</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="83" name="block_83" type="BlockType">
+    <controlInputObjs>.preheader</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="_ln17" lineNumber="17" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" opcode="ret" nodeLabel="15.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="17" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="./source/lab4_z4.c">
+      <validLinenumbers>17</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="305" pipe_depth="4" RegionName="Loop1">
+    <basic_blocks id="22" name="block_22" type="BlockType">
+      <controlInputObjs>block_16</controlInputObjs>
+      <controlInputObjs>Loop1</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.preheader1.preheader</controlOutputObjs>
+      <controlOutputObjs>Loop1</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="i_0" originalName="i" bitwidth="15" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <controlInputObjs>block_16</controlInputObjs>
+        <controlInputObjs>Loop1</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="icmp_ln7" lineNumber="7" fileName="./source/lab4_z4.c" fileDirectory=".." rtlName="icmp_ln7_fu_218_p2" contextFuncName="foo_b" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="2.26" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="7" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="i" lineNumber="7" originalName="i" fileName="./source/lab4_z4.c" fileDirectory=".." rtlName="i_fu_224_p2" contextFuncName="foo_b" bitwidth="15" opcode="add" nodeLabel="2.0" m_display="0" m_delay="2.14" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="7" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln7" lineNumber="7" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="7" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>Loop1</controlInputObjs>
+        <controlInputObjs>.preheader1.preheader</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="./source/lab4_z4.c">
+        <validLinenumbers>7</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="37" name="Loop1" type="BlockType">
+      <controlInputObjs>block_22</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_22</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="data_in_load" lineNumber="8" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="8" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>data_in</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="mul_ln8" lineNumber="8" fileName="./source/lab4_z4.c" fileDirectory=".." rtlName="mul_ln8_fu_235_p2" contextFuncName="foo_b" bitwidth="32" opcode="mul" nodeLabel="4.0" m_display="0" m_delay="8.47" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="8" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="temp1_addr_write_ln8" lineNumber="8" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" opcode="store" nodeLabel="5.0" m_display="0" m_delay="3.25" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="8" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="mul_ln9" lineNumber="9" fileName="./source/lab4_z4.c" fileDirectory=".." rtlName="mul_ln9_fu_240_p2" contextFuncName="foo_b" bitwidth="32" opcode="mul" nodeLabel="4.0" m_display="0" m_delay="8.47" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="9" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="temp2_addr_write_ln9" lineNumber="9" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" opcode="store" nodeLabel="5.0" m_display="0" m_delay="3.25" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="9" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="_ln7" lineNumber="7" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="7" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <controlInputObjs>block_22</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="./source/lab4_z4.c">
+        <validLinenumbers>8</validLinenumbers>
+        <validLinenumbers>9</validLinenumbers>
+        <validLinenumbers>7</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="306" pipe_depth="4" RegionName="Loop2">
+    <basic_blocks id="47" name=".preheader1" type="BlockType">
+      <controlInputObjs>.preheader1.preheader</controlInputObjs>
+      <controlInputObjs>Loop2</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.preheader.preheader</controlOutputObjs>
+      <controlOutputObjs>Loop2</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="j_0" originalName="j" bitwidth="15" opcode="phi" nodeLabel="8.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <controlInputObjs>Loop2</controlInputObjs>
+        <controlInputObjs>.preheader1.preheader</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="icmp_ln11" lineNumber="11" fileName="./source/lab4_z4.c" fileDirectory=".." rtlName="icmp_ln11_fu_244_p2" contextFuncName="foo_b" bitwidth="1" opcode="icmp" nodeLabel="8.0" m_display="0" m_delay="2.26" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="11" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="j" lineNumber="11" originalName="j" fileName="./source/lab4_z4.c" fileDirectory=".." rtlName="j_fu_250_p2" contextFuncName="foo_b" bitwidth="15" opcode="add" nodeLabel="8.0" m_display="0" m_delay="2.14" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="11" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="_ln11" lineNumber="11" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" opcode="br" nodeLabel="8.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="11" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>Loop2</controlInputObjs>
+        <controlInputObjs>.preheader.preheader</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="./source/lab4_z4.c">
+        <validLinenumbers>11</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="59" name="Loop2" type="BlockType">
+      <controlInputObjs>.preheader1</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.preheader1</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="temp1_load" lineNumber="12" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" bitwidth="32" opcode="load" nodeLabel="8.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="12" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="mul_ln12" lineNumber="12" fileName="./source/lab4_z4.c" fileDirectory=".." rtlName="mul_ln12_fu_261_p2" contextFuncName="foo_b" bitwidth="32" opcode="mul" nodeLabel="10.0" m_display="0" m_delay="8.47" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="12" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="temp3_addr_write_ln12" lineNumber="12" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" opcode="store" nodeLabel="11.0" m_display="0" m_delay="3.25" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="12" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="_ln11" lineNumber="11" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" opcode="br" nodeLabel="11.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="11" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <controlInputObjs>.preheader1</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="./source/lab4_z4.c">
+        <validLinenumbers>12</validLinenumbers>
+        <validLinenumbers>11</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="307" pipe_depth="2" RegionName="Loop3">
+    <basic_blocks id="67" name=".preheader" type="BlockType">
+      <controlInputObjs>.preheader.preheader</controlInputObjs>
+      <controlInputObjs>Loop3</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_83</controlOutputObjs>
+      <controlOutputObjs>Loop3</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="k_0" originalName="k" bitwidth="15" opcode="phi" nodeLabel="13.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <controlInputObjs>Loop3</controlInputObjs>
+        <controlInputObjs>.preheader.preheader</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="icmp_ln14" lineNumber="14" fileName="./source/lab4_z4.c" fileDirectory=".." rtlName="icmp_ln14_fu_266_p2" contextFuncName="foo_b" bitwidth="1" opcode="icmp" nodeLabel="13.0" m_display="0" m_delay="2.26" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="14" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="k" lineNumber="14" originalName="k" fileName="./source/lab4_z4.c" fileDirectory=".." rtlName="k_fu_272_p2" contextFuncName="foo_b" bitwidth="15" opcode="add" nodeLabel="13.0" m_display="0" m_delay="2.14" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="14" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="_ln14" lineNumber="14" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" opcode="br" nodeLabel="13.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="14" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>Loop3</controlInputObjs>
+        <controlInputObjs>block_83</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="./source/lab4_z4.c">
+        <validLinenumbers>14</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="81" name="Loop3" type="BlockType">
+      <controlInputObjs>.preheader</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.preheader</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="temp2_load" lineNumber="15" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" bitwidth="32" opcode="load" nodeLabel="13.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="15" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="temp3_load" lineNumber="15" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" bitwidth="32" opcode="load" nodeLabel="13.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="15" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="add_ln15" lineNumber="15" fileName="./source/lab4_z4.c" fileDirectory=".." rtlName="data_out_d0" contextFuncName="foo_b" bitwidth="32" opcode="add" nodeLabel="14.0" m_display="0" m_delay="2.7" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="15" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="data_out_addr_write_ln15" lineNumber="15" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" opcode="store" nodeLabel="14.0" m_display="0" m_delay="3.25" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="15" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="_ln14" lineNumber="14" fileName="./source/lab4_z4.c" fileDirectory=".." contextFuncName="foo_b" opcode="br" nodeLabel="14.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z4.c" linenumber="14" fileDirectory="/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4" functionName="foo_b"/>
+        <controlInputObjs>.preheader</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="./source/lab4_z4.c">
+        <validLinenumbers>15</validLinenumbers>
+        <validLinenumbers>14</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <regnodes realName="data_in_load_reg_326">
+    <nodeIds>28</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln12_reg_356">
+    <nodeIds>51</nodeIds>
+  </regnodes>
+  <regnodes realName="scale_addr_1_reg_296">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_310">
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <regnodes realName="k_reg_380">
+    <nodeIds>65</nodeIds>
+  </regnodes>
+  <regnodes realName="scale_load_1_reg_301">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="j_reg_351">
+    <nodeIds>45</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln14_reg_376">
+    <nodeIds>63</nodeIds>
+  </regnodes>
+  <regnodes realName="k_0_reg_203">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln8_reg_315">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="scale_addr_2_reg_342">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_ln12_reg_371">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_214">
+    <nodeIds>13</nodeIds>
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="data_in_addr_reg_321">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="temp1_addr_1_reg_361">
+    <nodeIds>52</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln7_reg_306">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_ln9_reg_337">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="scale_addr_reg_291">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="temp3_addr_1_reg_395">
+    <nodeIds>74</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_ln8_reg_332">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="temp1_load_reg_366">
+    <nodeIds>53</nodeIds>
+  </regnodes>
+  <regnodes realName="i_0_reg_181">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln15_reg_385">
+    <nodeIds>71</nodeIds>
+  </regnodes>
+  <regnodes realName="j_0_reg_192">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln11_reg_347">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="temp2_addr_1_reg_390">
+    <nodeIds>72</nodeIds>
+  </regnodes>
+  <expressionNodes realName="temp2_alloca_fu_54">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_fu_250">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="data_in_addr_gep_fu_89">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="k_fu_272">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mul_ln8_fu_235">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln14_fu_266">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln11_fu_244">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp1_addr_1_gep_fu_135">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_0_phi_fu_196">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="scale_addr_2_gep_fu_126">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="data_out_addr_gep_fu_168">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mul_ln9_fu_240">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp3_addr_gep_fu_142">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln15_fu_284">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp2_addr_1_gep_fu_154">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln12_fu_256">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mul_ln12_fu_261">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_224">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="scale_addr_1_gep_fu_70">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp2_addr_gep_fu_114">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln7_fu_218">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln15_fu_278">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_0_phi_fu_185">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="scale_addr_gep_fu_62">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp1_addr_gep_fu_102">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln8_fu_230">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp1_alloca_fu_50">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp3_alloca_fu_58">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp3_addr_1_gep_fu_161">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="k_0_phi_fu_207">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <memoryPorts dataString="data_in">
+    <nodeIds>28</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="data_out">
+    <nodeIds>78</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="scale">
+    <nodeIds>13</nodeIds>
+    <nodeIds>39</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="scale" portID="1">
+    <nodeIds>14</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="temp1">
+    <nodeIds>31</nodeIds>
+    <nodeIds>53</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="temp2">
+    <nodeIds>34</nodeIds>
+    <nodeIds>73</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="temp3">
+    <nodeIds>56</nodeIds>
+    <nodeIds>75</nodeIds>
+  </memoryPorts>
+  <ioPorts name="data_in(p0)">
+    <contents name="load">
+      <nodeIds>28</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="data_out(p0)">
+    <contents name="store">
+      <nodeIds>78</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="scale(p0)">
+    <contents name="load">
+      <nodeIds>13</nodeIds>
+      <nodeIds>39</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="scale(p1)">
+    <contents name="load">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="2" latency="2"/>
+      <operations id="14" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="2"/>
+      <operations id="14" stage="1" latency="2"/>
+      <operations id="15" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="28" stage="1" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+    </states>
+    <states id="7">
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="2" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="39" stage="1" latency="2"/>
+      <operations id="40" stage="1" latency="1"/>
+    </states>
+    <states id="9">
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="2" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="53" stage="1" latency="2"/>
+    </states>
+    <states id="11">
+      <operations id="54" stage="1" latency="1"/>
+    </states>
+    <states id="12">
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+    </states>
+    <states id="13">
+      <operations id="60" stage="1" latency="1"/>
+    </states>
+    <states id="14">
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="2" latency="2"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="2" latency="2"/>
+    </states>
+    <states id="15">
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="2"/>
+      <operations id="75" stage="1" latency="2"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+    </states>
+    <states id="16">
+      <operations id="82" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="foo_b" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="49164" mMaxLatency="49164">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <subRegions>7</subRegions>
+      <subRegions>8</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="1" mMaxLatency="1">
+      <basicBlocks>16</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Loop1" mII="1" mDepth="4" mMinTripCount="16384" mMaxTripCount="16384" mMinLatency="16386" mMaxLatency="16386" mType="1">
+      <basicBlocks>22</basicBlocks>
+      <basicBlocks>37</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="1" mMaxLatency="1">
+      <basicBlocks>41</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="Loop2" mII="1" mDepth="4" mMinTripCount="16384" mMaxTripCount="16384" mMinLatency="16386" mMaxLatency="16386" mType="1">
+      <basicBlocks>47</basicBlocks>
+      <basicBlocks>59</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>61</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="Loop3" mII="1" mDepth="2" mMinTripCount="16384" mMaxTripCount="16384" mMinLatency="16384" mMaxLatency="16384" mType="1">
+      <basicBlocks>67</basicBlocks>
+      <basicBlocks>81</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="8" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>83</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

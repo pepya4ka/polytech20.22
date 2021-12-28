@@ -1,0 +1,24 @@
+Warning: Could not load "/home/sokrat/tools/Xilinx/Vivado/2020.1/tps/lnx64/dot-2.28/lib/graphviz/libgvplugin_gd.so.6" - file not found
+Warning: Could not load "/home/sokrat/tools/Xilinx/Vivado/2020.1/tps/lnx64/dot-2.28/lib/graphviz/libgvplugin_gd.so.6" - file not found
+Warning: node '1', graph 'ap_test' size too small for label
+Warning: node '2', graph 'ap_test' size too small for label
+Warning: node '3', graph 'ap_test' size too small for label
+digraph ap_test {
+	graph [splines=ortho, rankdir=BT, size="500, 500"];
+	node [label="\N"];
+	graph [bb="0,0,283,792"];
+	1 [shape=box, fixedsize=true, width=1, height="0.25", pos="36,126"];
+	2 [shape=box, fixedsize=true, width=1, height="0.25", pos="187,9"];
+	3 [shape=box, fixedsize=true, width=1, height="0.25", pos="135,783"];
+	16 [shape=box, fixedsize=true, width="2.6806", height=2, pos="187,126"];
+	19 [shape=box, fixedsize=true, width="2.0972", height=2, pos="83,306"];
+	20 [shape=box, fixedsize=true, width="2.0972", height=2, pos="135,486"];
+	21 [shape=box, fixedsize=true, width="2.0972", height=2, pos="135,666"];
+	2 -> 16 [pos="e,187,53.744 187,18.181 187,18.181 187,43.744 187,43.744"];
+	1 -> 19 [pos="e,39.875,233.9 39.875,135.17 39.875,135.17 39.875,223.9 39.875,223.9"];
+	21 -> 3 [pos="e,135,773.87 135,738.1 135,738.1 135,763.87 135,763.87"];
+	16 -> 20 [pos="e,184.25,413.7 184.25,198.42 184.25,198.42 184.25,403.7 184.25,403.7"];
+	16 -> 19 [pos="e,124.5,233.81 124.5,198.18 124.5,198.18 124.5,223.81 124.5,223.81"];
+	19 -> 20 [pos="e,109,413.81 109,378.18 109,378.18 109,403.81 109,403.81"];
+	20 -> 21 [pos="e,135,593.81 135,558.18 135,558.18 135,583.81 135,583.81"];
+}

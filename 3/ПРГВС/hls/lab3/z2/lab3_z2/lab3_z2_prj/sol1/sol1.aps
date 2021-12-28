@@ -1,0 +1,22 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="sol1"/>
+    </name>
+    <project>
+        <value string="lab3_z2_prj"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xa7a12t:-csg325:-1Q"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/artix7/artix7" name="DefaultPlatform"/>
+        <library value="xilinx/artix7/artix7_fpv6" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock default="false" name="clk" uncertainty="0.1" period="6"/>
+    </clockList>
+    <config>
+        <schedule model="lab3_z2"/>
+    </config>
+</AutoPilot:solution>
+

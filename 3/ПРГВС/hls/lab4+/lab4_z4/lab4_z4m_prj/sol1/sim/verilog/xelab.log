@@ -1,0 +1,75 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/home/sokrat/tools/Xilinx/Vivado/2020.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/sokrat/tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_foo_m_top glbl -prj foo_m.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /home/sokrat/tools/Xilinx/Vivado/2020.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s foo_m -debug wave 
+Multi-threading is on. Using 2 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/sim/verilog/Loop_Loop1_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loop_Loop1_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/sim/verilog/Block_codeRepl8_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Block_codeRepl8_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/sim/verilog/fifo_w32_d3_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w32_d3_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w32_d3_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/sim/verilog/start_for_Loop_Locud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_Loop_Locud_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_Loop_Locud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/sim/verilog/start_for_Loop_Lobkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_Loop_Lobkb_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_Loop_Lobkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/sim/verilog/Loop_Loop2_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loop_Loop2_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/sim/verilog/foo_m.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_foo_m_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/sim/verilog/AESL_automem_data_out.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_data_out
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/sim/verilog/foo_m.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module foo_m
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/sim/verilog/AESL_automem_scale.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_scale
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/sim/verilog/Loop_Loop3_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loop_Loop3_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/sim/verilog/AESL_automem_data_in.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_data_in
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/sim/verilog/fifo_w32_d2_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w32_d2_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w32_d2_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sokrat/project/learn/Hybridsystem/homework/hw4+/lab4_z4/lab4_z4m_prj/sol1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Block_codeRepl8_proc
+Compiling module xil_defaultlib.Loop_Loop1_proc
+Compiling module xil_defaultlib.Loop_Loop2_proc
+Compiling module xil_defaultlib.Loop_Loop3_proc
+Compiling module xil_defaultlib.fifo_w32_d2_A_shiftReg
+Compiling module xil_defaultlib.fifo_w32_d2_A
+Compiling module xil_defaultlib.fifo_w32_d3_A_shiftReg
+Compiling module xil_defaultlib.fifo_w32_d3_A
+Compiling module xil_defaultlib.start_for_Loop_Lobkb_shiftReg
+Compiling module xil_defaultlib.start_for_Loop_Lobkb
+Compiling module xil_defaultlib.start_for_Loop_Locud_shiftReg
+Compiling module xil_defaultlib.start_for_Loop_Locud
+Compiling module xil_defaultlib.foo_m
+Compiling module xil_defaultlib.AESL_automem_data_in
+Compiling module xil_defaultlib.AESL_automem_scale
+Compiling module xil_defaultlib.AESL_automem_data_out
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(OUT_CH...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_I...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_I...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_I...
+Compiling module xil_defaultlib.AESL_deadlock_report_unit_1
+Compiling module xil_defaultlib.AESL_deadlock_detector_1
+Compiling module xil_defaultlib.apatb_foo_m_top
+Compiling module work.glbl
+Built simulation snapshot foo_m

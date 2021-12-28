@@ -1,0 +1,9 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="sol2"/>
+    </name>
+    <project>
+        <value string="lab3_z2_prj"/>
+    </project>
+</AutoPilot:solution>
+
