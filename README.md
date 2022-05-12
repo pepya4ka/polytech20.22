@@ -1,3 +1,5 @@
+[Other repo](https://github.com/Baray44/polytech20_22)
+
 # polytech20.22
 
 * **1** - первый семестр 
